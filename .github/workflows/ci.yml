@@ -1,0 +1,113 @@
+name: CI/CD Pipeline - Conversor SIRE
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  # ==========================================
+  # JOB 1: Validación de Sintaxis y Compilación
+  # ==========================================
+  validacion:
+    name: 1. Validación de Sintaxis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Comprobar sintaxis con compileall
+        run: |
+          python -m compileall main.py procesador_sire.py
+
+  # ==========================================
+  # JOB 2: Pruebas Unitarias Automatizadas
+  # ==========================================
+  pruebas:
+    name: 2. Pruebas Unitarias (Pytest)
+    needs: validacion
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Ejecutar pruebas unitarias
+        run: |
+          pytest -v
+
+  # ==========================================
+  # JOB 3: Despliegue Simulado y Artifacts
+  # ==========================================
+  despliegue_simulado:
+    name: 3. Despliegue Simulado
+    needs: pruebas
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar entorno de staging seguro
+        run: |
+          mkdir -p staging
+          
+          # Copiar únicamente los archivos públicos necesarios
+          cp main.py staging/
+          cp procesador_sire.py staging/
+          cp cuentas_compras.json staging/
+          cp empresas.example.json staging/
+          cp ctacom.example.json staging/
+          cp icon_eye.png staging/
+          cp requirements.txt staging/
+          cp README.md staging/
+          
+          if [ -f "MANUAL_PROYECTO.md" ]; then
+            cp MANUAL_PROYECTO.md staging/
+          fi
+
+          # Generar archivo con información del despliegue
+          echo "Despliegue simulado exitoso" > staging/deployment_info.txt
+          echo "Commit: ${{ github.sha }}" >> staging/deployment_info.txt
+          echo "Rama: ${{ github.ref_name }}" >> staging/deployment_info.txt
+          echo "Fecha UTC: $(date -u '+%Y-%m-%d %H:%M:%S')" >> staging/deployment_info.txt
+          echo "Ambiente: Staging Académico" >> staging/deployment_info.txt
+          
+          echo "=========================================="
+          echo "Despliegue simulado exitoso"
+          echo "=========================================="
+          cat staging/deployment_info.txt
+
+      - name: Publicar artefacto de despliegue
+        uses: actions/upload-artifact@v4
+        with:
+          name: conversor-sire-build-${{ github.sha }}
+          path: staging/
+          retention-days: 7

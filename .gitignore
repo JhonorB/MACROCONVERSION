@@ -1,0 +1,74 @@
+# ==========================================
+# SEGURIDAD: Credenciales y Tokens de API
+# ==========================================
+api_token.txt
+api_token2.txt
+.env
+.env.*
+
+# ==========================================
+# DATOS PRIVADOS: Clientes y Proveedores
+# ==========================================
+empresas.json
+ctacom.json
+autosave_sesion.json
+autosave_session.json
+config_sire.json
+cache_deudas.json
+
+# ==========================================
+# Python Cache & Entornos Virtuales
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+ENV/
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================================
+# CI/CD y Despliegue Simulado
+# ==========================================
+staging/
+deployment_info.txt
+
+# ==========================================
+# Archivos Temporales, Logs y Ofimática
+# ==========================================
+*.log
+*.tmp
+*.bak
+*.swp
+*.csv
+*.xlsx
+*.XLS
+*.xls
+*.pdf
+*.xml
+.DS_Store
+Thumbs.db
+desktop.ini
+scratch/
