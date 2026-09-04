@@ -251,3 +251,36 @@ def test_verificar_deudas_sin_tokens():
     rucs = ["20111111111", "20222222222", "123"] # 123 es RUC inválido
     resultado = verificar_deudas(rucs, token_apiperu="", token_jsonpe="")
     assert isinstance(resultado, list)
+
+
+def test_ventas_con_facturas_dolares_y_notas_credito(tmp_path):
+    """
+    Verifica que las facturas en USD mantengan sus montos originales en USD (sin dividir entre TC)
+    y que las Notas de Crédito mantengan su valor original para el resumen financiero.
+    """
+    csv_content = (
+        "Ruc,Razon Social,Periodo,CAR SUNAT,Fecha de emisión,Fecha Vcto/Pago,Tipo CP/Doc.,Serie del CDP,Nro CP o Doc. Nro Inicial (Rango),Nro Final (Rango),Tipo Doc Identidad,Nro Doc Identidad,Apellidos Nombres/ Razón Social,Valor Facturado Exportación,BI Gravada,Dscto BI,IGV / IPM,Dscto IGV / IPM,Mto Exonerado,Mto Inafecto,ISC,BI Grav IVAP,IVAP,ICBPER,Otros Tributos,Total CP,Moneda,Tipo Cambio,Fecha Emisión Doc Modificado,Tipo CP Modificado,Serie CP Modificado,Nro CP Modificado\n"
+        "20520775839,J-SIMEC S.A.C.,202608,CAR1,03/08/2026,,01,E001,513,,6,10161254326,CLIENTE 1,0,1735.44,0,312.38,0,0,0,0,0,0,0,0,2047.82,PEN,1.000,,,,\n"
+        "20520775839,J-SIMEC S.A.C.,202608,CAR2,03/08/2026,,07,E001,36,,6,10161254326,CLIENTE 1,0,-1735.44,0,-312.38,0,0,0,0,0,0,0,0,-2047.82,PEN,1.000,03/08/2026,01,E001,513\n"
+        "20520775839,J-SIMEC S.A.C.,202608,CAR3,04/08/2026,,01,E001,515,,6,20547006101,CLIENTE USD,0,3643.54,0,655.84,0,0,0,0,0,0,0,0,4299.38,USD,3.402,,,,\n"
+    )
+    csv_file = tmp_path / "ventas_usd_nc.csv"
+    csv_file.write_text(csv_content, encoding="utf-8")
+
+    res = preparar_dataframes(
+        str(csv_file),
+        str(tmp_path),
+        tipo="VTA",
+        codigo_empresa="0215",
+        año="26",
+        mes="08",
+        subtipo_vta="MERCADERIA"
+    )
+    df_forexel, _, _, _, _, _, _, _ = res
+
+    # Factura en USD debe conservar 3643.54 (no dividirse entre 3.402)
+    row_usd = df_forexel[df_forexel["NUMERO"] == "515"].iloc[0]
+    assert float(row_usd["VALVTA"]) == 3643.54
+    assert float(row_usd["IGV"]) == 655.84
+    assert row_usd["MND"] == "D"
+

@@ -237,24 +237,18 @@ def preparar_dataframes(ruta_csv, directorio_salida, tipo, codigo_empresa, año,
         df_forexel["TCVREF"] = obtener_columna(["tipo de cambio", "tipo cambio"])
         df_forexel["MND"] = obtener_columna(["moneda"])
         df_forexel["MND"] = df_forexel["MND"].apply(lambda x: 'S' if 'PEN' in str(x).upper() or 'SOL' in str(x).upper() else ('D' if 'USD' in str(x).upper() else x))
-        
-        # --- Limpieza y Conversión de Montos Numéricos ---
-        # El SIRE siempre reporta en Soles. Si la factura original es en Dólares (MND="D"), 
-        # debemos dividir entre el TCVREF para devolver los valores a dólares puros, 
-        # porque el sistema contable (CONCAR) los multiplicará al ingresarlos.
-        col_total_num = pd.to_numeric(col_total.astype(str).str.replace('-', '', regex=False).str.replace(',', '', regex=False), errors='coerce').fillna(0.0)
-        
-        tc_numeric = pd.to_numeric(df_forexel["TCVREF"], errors='coerce').fillna(1.0).replace(0, 1.0)
         is_usd = df_forexel["MND"] == "D"
         
-        col_total_num = col_total_num.where(~is_usd, col_total_num / tc_numeric)
+        # --- Limpieza y Conversión de Montos Numéricos ---
+        # Los montos en el SIRE vienen en su moneda respectiva (Soles o Dólares).
+        # Para CONCAR, los valores en FOREXEL se registran en positivo (la NC se invierte por TIPDOC).
+        col_total_num = pd.to_numeric(col_total.astype(str).str.replace('-', '', regex=False).str.replace(',', '', regex=False), errors='coerce').fillna(0.0)
         col_total = col_total_num.round(2)
         
         cols_numericas = ["VALVTA", "IGV", "ISC", "ICBPER"]
         for c in cols_numericas:
             if c in df_forexel.columns:
                 val_num = pd.to_numeric(df_forexel[c].astype(str).str.replace('-', '', regex=False).str.replace(',', '', regex=False), errors='coerce').fillna(0.0)
-                val_num = val_num.where(~is_usd, val_num / tc_numeric)
                 df_forexel[c] = val_num.round(2)
         # ------------------------------------
 
@@ -474,10 +468,9 @@ def preparar_dataframes(ruta_csv, directorio_salida, tipo, codigo_empresa, año,
                 
             df_forexel["CENCOS"] = df_forexel["CTACOM"].apply(asignar_cencos)
             
-            # Limpiar y convertir IMPINF (solo está en COM)
+            # Limpiar IMPINF (solo está en COM)
             if "IMPINF" in df_forexel.columns:
                 val_num = pd.to_numeric(df_forexel["IMPINF"].astype(str).str.replace('-', '', regex=False).str.replace(',', '', regex=False), errors='coerce').fillna(0.0)
-                val_num = val_num.where(~is_usd, val_num / tc_numeric)
                 df_forexel["IMPINF"] = val_num.round(2)
         else: # VTA
             df_forexel["TIPENT"] = "C" # Cliente

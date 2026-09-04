@@ -1,13 +1,111 @@
 import customtkinter as ctk
+from customtkinter.windows.widgets.scaling.scaling_tracker import ScalingTracker
+import tkinter
 from tkinter import filedialog, messagebox
 import json
 import os
+import sys
+import ctypes
 import datetime
 from procesador_sire import preparar_dataframes, guardar_excel_final
 
 # Configuración básica del tema (puedes cambiar "Dark" a "Light" o "System")
-ctk.set_appearance_mode("Dark")  
-ctk.set_default_color_theme("blue")  
+ctk.set_appearance_mode("Dark")
+ctk.set_default_color_theme("blue")
+
+# Tamaño de diseño de la ventana más grande de la app (el Asistente de
+# Facturas). Es la que manda a la hora de decidir cuánto se puede escalar
+# todo sin que se salga de la pantalla.
+_VENTANA_MAS_GRANDE = (1700, 960)
+
+
+def _ajustar_escala_a_pantalla():
+    """
+    Windows aplica un factor de escala DPI (125%, 150%, 225%, etc.) que
+    CustomTkinter multiplica automáticamente sobre TODO por igual: el tamaño
+    de la ventana y el tamaño de cada widget/fuente/padding.
+
+    Si se deja el factor nativo de Windows tal cual, en un monitor con
+    resolución física baja y escala alta, la ventana más grande de la app
+    puede terminar siendo físicamente más grande que la pantalla. Pero
+    anular el escalado por completo (bajarlo a 1:1) hace que todo se vea
+    diminuto en un monitor de alta resolución.
+
+    La solución es usar la escala nativa de Windows como punto de partida
+    y reducirla SOLO lo necesario para que la ventana más grande de la app
+    quepa con margen en la pantalla real — nunca más de lo necesario. La
+    reducción se aplica por igual a ventana y widgets (mismo factor) para
+    que las proporciones del diseño no se descuadren.
+    """
+    if not sys.platform.startswith("win"):
+        return
+
+    try:
+        ctypes.windll.shcore.SetProcessDpiAwareness(2)
+    except Exception:
+        pass
+
+    try:
+        dpi_detectado = ctypes.windll.user32.GetDpiForSystem() / 96.0
+        screen_w = ctypes.windll.user32.GetSystemMetrics(0)
+        screen_h = ctypes.windll.user32.GetSystemMetrics(1)
+    except Exception:
+        return
+
+    if dpi_detectado <= 0 or screen_w <= 0 or screen_h <= 0:
+        return
+
+    ancho_max, alto_max = _VENTANA_MAS_GRANDE
+    ratio_ancho = (screen_w * 0.94) / ancho_max
+    ratio_alto = (screen_h * 0.90) / alto_max
+
+    # La escala final nunca supera la nativa de Windows (no "agrandar" de
+    # más), pero se reduce hasta lo que haga falta para que la ventana más
+    # grande entre en la pantalla.
+    escala_efectiva = min(dpi_detectado, ratio_ancho, ratio_alto)
+
+    # Redondear HACIA ABAJO al escalón de 0.25 más cercano (los mismos
+    # pasos de 100%, 125%, 150%... que ofrece Windows). CustomTkinter
+    # escala cada valor truncando (int(valor * escala), sin redondear), y
+    # con un factor "raro" (ej. 1.592) ese truncamiento varía ligeramente
+    # de un widget a otro; en listas largas con muchas tarjetas apiladas
+    # ese desajuste se va acumulando tarjeta por tarjeta y se nota como un
+    # parpadeo/"fantasma" al hacer scroll. Los escalones estándar son los
+    # que la librería usa y prueba en la práctica.
+    escala_efectiva = int(escala_efectiva * 4) / 4
+    escala_efectiva = max(1.0, escala_efectiva)
+
+    factor = escala_efectiva / dpi_detectado
+    factor = max(0.4, min(1.0, factor))
+
+    ctk.set_widget_scaling(factor)
+    ctk.set_window_scaling(factor)
+
+
+_ajustar_escala_a_pantalla()
+
+
+def geometria_segura(window, ancho_deseado, alto_deseado, margen_w=0.96, margen_h=0.92, offset_y=0):
+    """
+    Centra una ventana respetando el tamaño deseado (en las mismas unidades
+    de diseño que usa el resto de la app), recortándolo si ni siquiera a la
+    escala efectiva actual cabe con margen en la pantalla real.
+    """
+    escala = ScalingTracker.get_window_scaling(window)
+    screen_w = window.winfo_screenwidth()
+    screen_h = window.winfo_screenheight()
+
+    max_ancho = (screen_w * margen_w) / escala
+    max_alto = (screen_h * margen_h) / escala
+
+    ancho = min(ancho_deseado, int(max_ancho))
+    alto = min(alto_deseado, int(max_alto))
+
+    x = max(0, int((screen_w - ancho * escala) / 2))
+    y = max(0, int((screen_h - alto * escala) / 2) + offset_y)
+
+    return f"{ancho}x{alto}+{x}+{y}"
+
 
 class App(ctk.CTk):
     def __init__(self):
@@ -16,24 +114,9 @@ class App(ctk.CTk):
         self.title("Conversor SIRE a Macro Excel")
         self.update_idletasks()
         
-        # Centrado matemático robusto (compatible con escalado de Windows)
-        width = 750
-        height = 680
-        screen_w = self.winfo_screenwidth()
-        screen_h = self.winfo_screenheight()
-        
-        # Parche para pantallas ultra-anchas o multi-monitor
-        if screen_w > 2560:
-            screen_w = 1920
-            
-        x = int((screen_w / 2) - (width / 2))
-        y = int((screen_h / 2) - (height / 2))
-        
-        # Evitar que se oculte debajo de la barra de tareas
-        x = max(10, x)
-        y = max(10, y - 40)
-        
-        self.geometry(f"{width}x{height}+{x}+{y}")
+        # Tamaño y posición en píxeles reales de pantalla, compensando el
+        # factor de escalado DPI de Windows (ver geometria_segura()).
+        self.geometry(geometria_segura(self, 750, 680, offset_y=-20))
         
         self.ruta_json = os.path.join(os.path.dirname(__file__), "empresas.json")
         try:
@@ -56,8 +139,42 @@ class App(ctk.CTk):
             except:
                 pass
         self.ruta_pdfs = self.config.get("ruta_pdfs", "")
-        
+
         self.construir_ui()
+
+        # Red de seguridad contra el parpadeo/"fantasma" que a veces deja
+        # CTkScrollableFrame al hacer scroll con la rueda en listas largas
+        # (el canvas interno de Tkinter a veces deja restos visuales de las
+        # tarjetas anteriores). El redibujo se DIFIERE hasta que el scroll
+        # se detiene (en vez de forzarlo en cada evento) para no interferir
+        # con el propio manejo interno del scroll de CustomTkinter mientras
+        # está en curso. Se registra una sola vez porque bind_all es global
+        # al intérprete de Tk, no por ventana.
+        self._redibujo_scroll_pendiente = None
+        self.bind_all("<MouseWheel>", self._programar_redibujo_tras_scroll, add="+")
+
+    def _programar_redibujo_tras_scroll(self, event):
+        if self._redibujo_scroll_pendiente is not None:
+            try:
+                self.after_cancel(self._redibujo_scroll_pendiente)
+            except Exception:
+                pass
+        widget_origen = event.widget
+        self._redibujo_scroll_pendiente = self.after(120, lambda: self._redibujar_canvas_scroll(widget_origen))
+
+    def _redibujar_canvas_scroll(self, widget_origen):
+        self._redibujo_scroll_pendiente = None
+        try:
+            canvas = widget_origen
+            profundidad = 0
+            while canvas is not None and not isinstance(canvas, tkinter.Canvas) and profundidad < 25:
+                canvas = getattr(canvas, "master", None)
+                profundidad += 1
+            if isinstance(canvas, tkinter.Canvas) and canvas.winfo_exists():
+                canvas.configure(scrollregion=canvas.bbox("all"))
+                canvas.update_idletasks()
+        except Exception:
+            pass
 
     def construir_ui(self):
         # Título principal
@@ -367,16 +484,11 @@ class App(ctk.CTk):
     def mostrar_popup_detracciones(self, df_forexel, df_docref, lista_detracciones, tipo, ruta_generada, cantidad_nc, eliminados_año_pasado, eliminados_deuda, silent_alerts, facturas_pendientes=None):
         popup = ctk.CTkToplevel(self)
         popup.title("⚠️ ¡Detracciones Detectadas!")
-        popup.geometry("780x520")
-        popup.minsize(680, 420)
         popup.transient(self)
         popup.grab_set()  # Hacerla modal
-        
-        # Centrar ventana
-        p_w, p_h = 780, 520
-        x = max(10, (self.winfo_screenwidth() // 2) - (p_w // 2))
-        y = max(10, (self.winfo_screenheight() // 2) - (p_h // 2))
-        popup.geometry(f"{p_w}x{p_h}+{x}+{y}")
+
+        popup.geometry(geometria_segura(popup, 780, 520))
+        popup.minsize(600, 380)
         
         lbl_info = ctk.CTkLabel(popup, text="Se han detectado comprobantes con Detracción (letra 'D').\nDecida si desea que PASEN al Excel o si se EXCLUYEN del reporte final.", font=ctk.CTkFont(size=15, weight="bold"))
         lbl_info.pack(pady=(18, 6), padx=20)
@@ -484,16 +596,10 @@ class App(ctk.CTk):
         popup = ctk.CTkToplevel(self)
         titulo = "RESUMEN DE VENTAS" if tipo == "VTA" else "RESUMEN DE COMPRAS"
         popup.title(titulo)
-        popup.geometry("500x520")
         popup.grab_set()
         popup.transient(self)
-        
-        # Centrar popup
-        p_width = 500
-        p_height = 520
-        x = (self.winfo_screenwidth() // 2) - (p_width // 2)
-        y = (self.winfo_screenheight() // 2) - (p_height // 2)
-        popup.geometry(f'{p_width}x{p_height}+{x}+{y}')
+
+        popup.geometry(geometria_segura(popup, 500, 520))
         
         # Usar columnas originales del CSV (_BI_ORIG, _IGV_ORIG, _TOTAL_ORIG)
         # que conservan los valores reales de BI Gravada, IGV/IPM y Total CP
@@ -504,16 +610,19 @@ class App(ctk.CTk):
         tasas_detectadas = set()
         
         for _, row in df_final.iterrows():
+            tipdoc = str(row.get('TIPDOC', '')).strip().zfill(2)
+            signo = -1.0 if tipdoc in ('07', '7') else 1.0
+            
             try:
-                bi = float(str(row.get('_BI_ORIG', 0.0)).replace(',', '') or 0.0)
+                bi = abs(float(str(row.get('_BI_ORIG', 0.0)).replace(',', '') or 0.0)) * signo
             except (ValueError, TypeError):
                 bi = 0.0
             try:
-                igv = float(str(row.get('_IGV_ORIG', 0.0)).replace(',', '') or 0.0)
+                igv = abs(float(str(row.get('_IGV_ORIG', 0.0)).replace(',', '') or 0.0)) * signo
             except (ValueError, TypeError):
                 igv = 0.0
             try:
-                tot = float(str(row.get('_TOTAL_ORIG', 0.0)).replace(',', '') or 0.0)
+                tot = abs(float(str(row.get('_TOTAL_ORIG', 0.0)).replace(',', '') or 0.0)) * signo
             except (ValueError, TypeError):
                 tot = 0.0
             
@@ -522,8 +631,8 @@ class App(ctk.CTk):
             total_total += tot
             
             # Detectar tasa usando la proporción real IGV/BI del CSV
-            if bi > 0 and igv > 0:
-                ratio = igv / bi
+            if abs(bi) > 0 and abs(igv) > 0:
+                ratio = abs(igv) / abs(bi)
                 if 0.10 <= ratio <= 0.11:
                     tasas_detectadas.add("10.5 %")
                 elif 0.17 <= ratio <= 0.19:
@@ -576,19 +685,12 @@ class App(ctk.CTk):
         popup = ctk.CTkToplevel(self)
         popup.title("Asistente de Cuentas: Facturas de Compras")
         popup.transient(self)
-        
-        # Dimensiones responsivas (90-94% del espacio disponible, centrado)
-        screen_w = self.winfo_screenwidth()
-        screen_h = self.winfo_screenheight()
-        if screen_w > 2560:
-            screen_w = 1920
-        p_width = max(980, min(int(screen_w * 0.92), 1700))
-        p_height = max(620, min(int(screen_h * 0.90), 960))
-        x = max(10, (screen_w - p_width) // 2)
-        y = max(10, (screen_h - p_height) // 2 - 25)
-        popup.geometry(f"{p_width}x{p_height}+{x}+{y}")
-        popup.minsize(940, 580)
-        
+
+        # Dimensiones responsivas en píxeles reales de pantalla (94%/90% del
+        # espacio disponible, con un tope de 1700x960 para pantallas grandes)
+        popup.geometry(geometria_segura(popup, 1700, 960, margen_w=0.94, margen_h=0.90, offset_y=-15))
+        popup.minsize(900, 560)
+
         self.after(200, popup.focus)
         popup.grab_set()
         
