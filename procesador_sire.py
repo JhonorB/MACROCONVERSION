@@ -3,9 +3,10 @@ import os
 import json
 import urllib.request
 import urllib.error
+from rutas import obtener_ruta_datos
 
 def verificar_deudas(lista_rucs, token_apiperu, token_jsonpe):
-    ruta_cache = os.path.join(os.path.dirname(__file__), "cache_deudas.json")
+    ruta_cache = obtener_ruta_datos("cache_deudas.json")
     cache = {}
     if os.path.exists(ruta_cache):
         try:
@@ -280,19 +281,45 @@ def preparar_dataframes(ruta_csv, directorio_salida, tipo, codigo_empresa, año,
             df_forexel.loc[mask_boleta, "VALVTA"] = col_total.loc[mask_boleta]
             df_forexel.loc[mask_boleta, "TIPVAL"] = "A"
 
-        # Valores por defecto y específicos según tipo
-        mask_soles = df_forexel["MND"] == "S"
+        # -------------------------------------------------------
+        # DIVISION POR TIPO DE CAMBIO (CRÍTICO)
+        # El CSV del SIRE reporta los montos en SOLES incluso para facturas en USD.
+        # ERGOSOFT/CONCAR importa el Excel y MULTIPLICA por TC para obtener soles.
+        # Por lo tanto, debemos DIVIDIR los montos por TC antes de exportar.
+        # Así: (soles / TC) → Excel → ERGOSOFT multiplica por TC → soles correcto
+        # -------------------------------------------------------
+        tc_numeric = pd.to_numeric(
+            df_forexel["TCVREF"].astype(str).str.replace(',', '', regex=False).str.strip(),
+            errors='coerce'
+        ).fillna(1.0).replace(0.0, 1.0)
+
+        # Dividir entre TC para filas en USD
+        col_total = col_total.where(~is_usd, (col_total / tc_numeric).round(2))
+        for c in cols_numericas:
+            if c in df_forexel.columns:
+                df_forexel[c] = df_forexel[c].where(~is_usd, (df_forexel[c] / tc_numeric).round(2))
+
+        # TIPCONV y TCVREF para ERGOSOFT / CONCAR:
+        # - Facturas / Boletas: TIPCONV = "V" (Venta a la fecha de emisión), TCVREF = "", FECCONV = ""
+        # - Notas de Crédito (07) y Débito (08): TIPCONV = "F" (Fecha documento de referencia),
+        #   TCVREF = "V" (Tasa de Venta a esa fecha), FECCONV = Fecha de emisión del documento modificado.
+        # Esto hace que ERGOSOFT busque el Tipo de Cambio de la fecha de la factura original
+        # y permite cuadrar exactamente los S/ -38,538.27 del SIRE sin producir ceros.
         df_forexel["TIPCONV"] = "V"
-        mask_nc = df_forexel["TIPDOC"].astype(str).str.strip().str.zfill(2) == "07"
-        df_forexel.loc[mask_nc, "TIPCONV"] = "F"
-        
-        df_forexel["FECCONV"] = ""
-        df_forexel.loc[mask_nc, "FECCONV"] = df_forexel.loc[mask_nc, "FECEMI"]
-        
-        # El usuario indica que TCVREF va vacío, excepto en Notas de Crédito que lleva "V"
         df_forexel["TCVREF"] = ""
+        df_forexel["FECCONV"] = ""
+
+        mask_nc = df_forexel["TIPDOC"].astype(str).str.strip().str.zfill(2).isin(["07", "08"])
+        col_fec_mod = obtener_columna(["fecha emisión doc modificado", "fecha emision doc modificado", "fecha emi ref", "fecha doc modificado"])
+        fechas_conv_nc = col_fec_mod.where(col_fec_mod.astype(str).str.strip() != "", df_forexel["FECEMI"])
+
+        df_forexel.loc[mask_nc, "TIPCONV"] = "F"
         df_forexel.loc[mask_nc, "TCVREF"] = "V"
-        
+        df_forexel.loc[mask_nc, "FECCONV"] = fechas_conv_nc.loc[mask_nc]
+
+        # TIPDOC siempre con cero inicial para que ERGOSOFT reconozca "07", "01", etc.
+        df_forexel["TIPDOC"] = df_forexel["TIPDOC"].astype(str).str.strip().str.zfill(2)
+
         if tipo == "COM":
             df_forexel["IMPINF"] = obtener_columna(["valor adq. ng", "bi no gravado", "inafecto", "exonerado", "valor adq"])
             df_forexel["TIPENT"] = "P" # Proveedor
@@ -355,13 +382,13 @@ def preparar_dataframes(ruta_csv, directorio_salida, tipo, codigo_empresa, año,
                 
             # Filtro de Deuda Coactiva
             try:
-                ruta_token = os.path.join(os.path.dirname(__file__), "api_token.txt")
+                ruta_token = obtener_ruta_datos("api_token.txt")
                 token_api = ""
                 if os.path.exists(ruta_token):
                     with open(ruta_token, "r", encoding="utf-8") as f:
                         token_api = f.read().strip()
                         
-                ruta_token2 = os.path.join(os.path.dirname(__file__), "api_token2.txt")
+                ruta_token2 = obtener_ruta_datos("api_token2.txt")
                 token_jsonpe = ""
                 if os.path.exists(ruta_token2):
                     with open(ruta_token2, "r", encoding="utf-8") as f:
@@ -545,9 +572,8 @@ def preparar_dataframes(ruta_csv, directorio_salida, tipo, codigo_empresa, año,
         nombre_archivo = f"{tipo}{codigo_empresa}{año}{mes}.xlsx"
         ruta_salida = os.path.join(directorio_salida, nombre_archivo)
         
-        # Contar Notas de Crédito procesadas globales (robusto)
+        # Contar Notas de Credito procesadas globales (robusto)
         cantidad_nc_global = df_forexel["TIPDOC"].astype(str).str.strip().str.zfill(2).isin(["07", "08"]).sum()
-        # Devolvemos 8 elementos (incluyendo una lista vacía para facturas, ya que ya fueron asignadas)
         return df_forexel, df_docref, ruta_salida, lista_detracciones, int(cantidad_nc_global), int(eliminados_año_pasado), [], int(eliminados_deuda)
     except Exception as e:
         raise Exception(f"Error al procesar el archivo: {str(e)}")
@@ -571,20 +597,115 @@ def guardar_excel_final(df_forexel, df_docref, indices_eliminar, tipo, ruta_sali
     # Eliminar columnas internas antes de escribir al Excel
     df_forexel = df_forexel.drop(columns=["_BI_ORIG", "_IGV_ORIG", "_TOTAL_ORIG"], errors='ignore')
 
+    # -------------------------------------------------------
+    # CONVERSIÓN DE TIPOS - CRÍTICO PARA ERGOSOFT
+    # Basado en análisis del archivo de referencia VTA00192607.xlsx que funciona:
+    # - VALVTA: float puro, formato Excel "General"
+    # - ISC, IGV, ICBPER: float puro, formato Excel "#,##0.00"
+    # - TASISC, TASIGV, RC: float, formato "0.00"
+    # - CANT: float, formato "0.000"
+    # - TCVREF: float solo si hay valor distinto de 0, formato "0.0000"
+    # ERGOSOFT no puede leer strings aunque sean "1735.44" → devuelve 0.
+    # -------------------------------------------------------
+
+    def to_float_safe(series):
+        return pd.to_numeric(
+            series.astype(str).str.replace(',', '', regex=False).str.strip(),
+            errors='coerce'
+        ).fillna(0.0)
+
+    # Convertir columnas numéricas a float ANTES de to_excel
+    for c in ["VALVTA", "IMPINF", "LIQIMP", "BASIMP", "ISC", "IGV", "ICBPER",
+              "TASISC", "TASIGV", "RC", "CANT"]:
+        if c in df_forexel.columns:
+            df_forexel[c] = to_float_safe(df_forexel[c])
+
+    # TCVREF: 'V'/'C' como texto para NC (TIPCONV='F'), float si tiene tasa numérica, None si es 0 o vacío
+    if "TCVREF" in df_forexel.columns:
+        def parse_tcvref(v):
+            v_str = str(v).strip().upper()
+            if v_str in ["V", "C"]:
+                return v_str
+            try:
+                fv = float(str(v).replace(',', '').strip())
+                return fv if fv != 0.0 else None
+            except:
+                return None
+        df_forexel["TCVREF"] = df_forexel["TCVREF"].apply(parse_tcvref)
+
+    # Fechas como datetime para que openpyxl las escriba correctamente
+    for c in ["FECEMI", "FECVCT", "FECCONV", "FECREG"]:
+        if c in df_forexel.columns:
+            df_forexel[c] = pd.to_datetime(df_forexel[c], dayfirst=True, errors='coerce')
+
     with pd.ExcelWriter(ruta_salida, engine='openpyxl') as writer:
         df_forexel.to_excel(writer, sheet_name='FOREXEL', index=False)
         df_docref.to_excel(writer, sheet_name='DOCREF', index=False)
         
-        # Auto-ajustar el ancho de las columnas en FOREXEL
-        worksheet = writer.sheets['FOREXEL']
-        for col in worksheet.columns:
-            max_length = 0
-            column = col[0].column_letter # Ej: 'A', 'X', 'AA'
-            for cell in col:
-                try:
-                    if len(str(cell.value)) > max_length:
-                        max_length = len(str(cell.value))
-                except:
-                    pass
-            adjusted_width = min(max(max_length + 3, 12), 50)
-            worksheet.column_dimensions[column].width = adjusted_width
+        # Definir formatos Excel para cada columna (idénticos al archivo referencia)
+        fmt_general   = {"VALVTA", "IMPINF", "LIQIMP", "BASIMP"}
+        fmt_coma      = {"ISC", "IGV", "ICBPER"}
+        fmt_00        = {"TASISC", "TASIGV", "RC"}
+        fmt_000       = {"CANT"}
+        fmt_0000      = {"TCVREF"}
+        fmt_fecha     = {"FECEMI", "FECVCT", "FECCONV", "FECREG", "FECEMIR"}
+        fmt_texto     = {"TAST", "CTAXCOB", "CTAXPAG", "TIPENT", "TIPDOC", "DETRAC", "ESTD",
+                         "TIPCONV", "DH", "TIPVAL", "CTAVTA", "AFECIRTA", "CENCOS",
+                         "CODPROY", "CODPART", "TIPENT2", "CODENT2", "CODAGEN",
+                         "INDRET", "TIH", "CODIH", "INFHT", "INFHTRB", "TIPCDI"}
+
+        for sheet_name in ['FOREXEL', 'DOCREF']:
+            if sheet_name not in writer.sheets:
+                continue
+            worksheet = writer.sheets[sheet_name]
+            headers = {cell.column: cell.value for cell in worksheet[1]}
+
+            for row in worksheet.iter_rows(min_row=2):
+                for cell in row:
+                    h = headers.get(cell.column)
+                    if cell.value is None:
+                        continue
+                    try:
+                        if h in fmt_general:
+                            cell.number_format = 'General'
+                        elif h in fmt_coma:
+                            cell.number_format = '#,##0.00'
+                        elif h in fmt_00:
+                            cell.number_format = '0.00'
+                        elif h in fmt_000:
+                            cell.number_format = '0.000'
+                        elif h in fmt_0000:
+                            if isinstance(cell.value, (int, float)):
+                                cell.number_format = '0.0000'
+                            else:
+                                cell.number_format = '@'
+                        elif h in fmt_fecha:
+                            # Convertir a date puro (sin hora 00:00:00) y aplicar formato
+                            import datetime as _dt
+                            if hasattr(cell.value, 'date'):
+                                cell.value = cell.value.date()
+                            elif isinstance(cell.value, str):
+                                try:
+                                    cell.value = _dt.datetime.strptime(cell.value.split(' ')[0], '%Y-%m-%d').date()
+                                except:
+                                    pass
+                            cell.number_format = 'dd/mm/yyyy'
+                        elif h in fmt_texto:
+                            if not isinstance(cell.value, str):
+                                cell.value = str(cell.value)
+                            cell.number_format = '@'
+                    except:
+                        pass
+
+            # Auto-ajustar ancho de columnas
+            for col in worksheet.columns:
+                max_length = 0
+                column = col[0].column_letter
+                for cell in col:
+                    try:
+                        if len(str(cell.value)) > max_length:
+                            max_length = len(str(cell.value))
+                    except:
+                        pass
+                adjusted_width = min(max(max_length + 3, 12), 50)
+                worksheet.column_dimensions[column].width = adjusted_width

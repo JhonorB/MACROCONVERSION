@@ -65,12 +65,21 @@ Conversor_SIRE/
 │   ├── __init__.py
 │   └── test_procesador_sire.py    # Suite de pruebas unitarias automatizadas (pytest)
 │
+├── datos/                          # Carpeta centralizada de datos locales y persistencia
+│   └── .gitkeep
+│
 ├── main.py                         # Controlador principal e Interfaz Gráfica (UI)
 ├── procesador_sire.py              # Motor contable de conversión, reglas y validaciones
+├── rutas.py                        # Gestor de rutas dinámicas y auto-recuperación de datos
+├── instalador.py                   # Asistente gráfico de instalación para Windows
 ├── cuentas_compras.json            # Plan Contable General Empresarial (PCGE) oficial
 ├── empresas.example.json           # Plantilla de ejemplo para registro de empresas
 ├── ctacom.example.json             # Plantilla de ejemplo para historial de cuentas
 ├── icon_eye.png                    # Icono en alta resolución para el visor de comprobantes
+├── app_icon.ico                    # Icono oficial de la aplicación (formato Windows)
+├── app_icon.png                    # Icono oficial de la aplicación (formato PNG)
+├── Conversor_SIRE.spec             # Especificación PyInstaller para la aplicación principal
+├── Instalador_Conversor_SIRE_Setup.spec # Especificación PyInstaller para el instalador
 ├── requirements.txt                # Dependencias oficiales del proyecto
 ├── MANUAL_PROYECTO.md              # Manual técnico y funcional detallado
 ├── .gitignore                      # Reglas de exclusión de archivos privados

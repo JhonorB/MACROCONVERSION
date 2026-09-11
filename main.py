@@ -8,6 +8,7 @@ import sys
 import ctypes
 import datetime
 from procesador_sire import preparar_dataframes, guardar_excel_final
+from rutas import obtener_ruta_datos, obtener_ruta_asset, obtener_directorio_base
 
 # Configuración básica del tema (puedes cambiar "Dark" a "Light" o "System")
 ctk.set_appearance_mode("Dark")
@@ -118,7 +119,7 @@ class App(ctk.CTk):
         # factor de escalado DPI de Windows (ver geometria_segura()).
         self.geometry(geometria_segura(self, 750, 680, offset_y=-20))
         
-        self.ruta_json = os.path.join(os.path.dirname(__file__), "empresas.json")
+        self.ruta_json = obtener_ruta_datos("empresas.json")
         try:
             with open(self.ruta_json, "r", encoding="utf-8") as f:
                 self.empresas = json.load(f)
@@ -130,7 +131,7 @@ class App(ctk.CTk):
         self.ruta_csv = ""
         
         # Configuración extra (Ruta PDFs)
-        self.ruta_config = os.path.join(os.path.dirname(__file__), "config_sire.json")
+        self.ruta_config = obtener_ruta_datos("config_sire.json")
         self.config = {}
         if os.path.exists(self.ruta_config):
             try:
@@ -698,7 +699,7 @@ class App(ctk.CTk):
         eye_icon_img = None
         try:
             from PIL import Image as PILImage
-            icon_path = os.path.join(os.path.dirname(__file__), "icon_eye.png")
+            icon_path = obtener_ruta_asset("icon_eye.png")
             if os.path.exists(icon_path):
                 pil_img = PILImage.open(icon_path)
                 eye_icon_img = ctk.CTkImage(light_image=pil_img, dark_image=pil_img, size=(24, 24))
@@ -714,7 +715,7 @@ class App(ctk.CTk):
             return str(cta_str).strip()
 
         # Load Cuentas
-        ruta_cuentas = os.path.join(os.path.dirname(__file__), "cuentas_compras.json")
+        ruta_cuentas = obtener_ruta_datos("cuentas_compras.json")
         todas_cuentas = []
         if os.path.exists(ruta_cuentas):
             try:
@@ -733,7 +734,7 @@ class App(ctk.CTk):
             todas_cuentas = ["6011001 - MERCADERIAS", "6311001 - TRANSPORTE", "6561001 - SUMINISTROS", "6391001 - OTROS SERVICIOS", "3361001 - EQUIPOS"]
 
         # Load Historial
-        ruta_cta = os.path.join(os.path.dirname(__file__), "ctacom.json")
+        ruta_cta = obtener_ruta_datos("ctacom.json")
         cta_db = {}
         if os.path.exists(ruta_cta):
             try:
@@ -746,7 +747,7 @@ class App(ctk.CTk):
                 cta_db[ruc] = {data: 1}
 
         # Inicializar estado de autosave y asignaciones
-        self.ruta_autosave = os.path.join(os.path.dirname(__file__), "autosave_sesion.json")
+        self.ruta_autosave = obtener_ruta_datos("autosave_sesion.json")
         self.autosave_db = {}
         if os.path.exists(self.ruta_autosave):
             try:

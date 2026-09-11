@@ -278,9 +278,12 @@ def test_ventas_con_facturas_dolares_y_notas_credito(tmp_path):
     )
     df_forexel, _, _, _, _, _, _, _ = res
 
-    # Factura en USD debe conservar 3643.54 (no dividirse entre 3.402)
+    # Factura en USD para FOREXEL / CONCAR / ERGOSOFT se divide entre TC (3643.54 / 3.402 = 1071.00)
     row_usd = df_forexel[df_forexel["NUMERO"] == "515"].iloc[0]
-    assert float(row_usd["VALVTA"]) == 3643.54
-    assert float(row_usd["IGV"]) == 655.84
+    assert float(row_usd["VALVTA"]) == 1071.00
+    assert float(row_usd["IGV"]) == 192.78
     assert row_usd["MND"] == "D"
+    # Valores originales en soles para el resumen financiero:
+    assert float(row_usd["_BI_ORIG"]) == 3643.54
+    assert float(row_usd["_IGV_ORIG"]) == 655.84
 

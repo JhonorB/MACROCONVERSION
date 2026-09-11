@@ -11,16 +11,21 @@ El **Conversor SIRE SUNAT** es una aplicación de escritorio integral desarrolla
 ```text
 Conversor_SIRE/
 │
+├── datos/                      # Carpeta de persistencia local (auto-recuperable)
+│   └── .gitkeep
 ├── main.py                     # Interfaz Gráfica (UI) y controladores de interacción
 ├── procesador_sire.py          # Motor contable de procesamiento, validaciones y exportación
-├── empresas.json               # Catálogo de empresas registradas con código de anexo CONCAR
+├── rutas.py                    # Gestor centralizado de rutas y persistencia de datos
+├── instalador.py               # Asistente gráfico de instalación para Windows
 ├── cuentas_compras.json        # Plan de cuentas contables oficial para compras (PCGE)
-├── ctacom.json                 # Memoria histórica de asignación de cuentas por RUC de proveedor
-├── autosave_sesion.json        # Respaldo en tiempo real de la sesión de asignación
-├── api_token.txt               # Token para API SUNAT (apiperu.dev)
-├── api_token2.txt              # Token de respaldo para API SUNAT (api.json.pe)
+├── empresas.example.json       # Plantilla base para registro de empresas
+├── ctacom.example.json         # Plantilla base para historial de cuentas
+├── app_icon.ico                # Icono oficial de Windows
+├── app_icon.png                # Icono oficial PNG
 ├── icon_eye.png                # Icono de alta resolución para el visor de comprobantes
-└── requirements.txt            # Dependencias del proyecto (customtkinter, pandas, openpyxl, pymupdf, requests, pillow)
+├── Conversor_SIRE.spec         # Script de compilación PyInstaller para la aplicación
+├── Instalador_Conversor_SIRE_Setup.spec # Script de compilación para el instalador
+└── requirements.txt            # Dependencias del proyecto
 ```
 
 ---
