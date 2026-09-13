@@ -1,0 +1,4846 @@
+[
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "335",
+      "descripcion": "335 - MUEBLES Y ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "3351",
+      "descripcion": "3351 - MUEBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "3351001",
+      "descripcion": "3351001 - MUEBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "3352",
+      "descripcion": "3352 - ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "3352001",
+      "descripcion": "3352001 - ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "336",
+      "descripcion": "336 - EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "3361",
+      "descripcion": "3361 - EQUIPOS PARA PROCESAMIENTO DE INFORMACION (COMPUTO)"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6011",
+      "descripcion": "6011 - MERCADERIAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6011001",
+      "descripcion": "6011001 - MERCADERIAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6020001",
+      "descripcion": "6020001 - MATERIAS PRIMAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6031",
+      "descripcion": "6031 - MATERIALES AUXILIARES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6031001",
+      "descripcion": "6031001 - MATERIALES AUXILIARES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6032",
+      "descripcion": "6032 - SUMINISTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6032001",
+      "descripcion": "6032001 - COMBUSTIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6032002",
+      "descripcion": "6032002 - LUBRICANTES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6032003",
+      "descripcion": "6032003 - ENERGIA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6033",
+      "descripcion": "6033 - REPUESTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6033001",
+      "descripcion": "6033001 - REPUESTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6041",
+      "descripcion": "6041 - ENVASES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6041001",
+      "descripcion": "6041001 - ENVASES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6042",
+      "descripcion": "6042 - EMBALAJES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6042001",
+      "descripcion": "6042001 - EMBALAJES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6091",
+      "descripcion": "6091 - COSTOS VINCULADOS CON LAS COMPRAS DE MERCADERIAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60911",
+      "descripcion": "60911 - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6091101",
+      "descripcion": "6091101 - COST. VINC. - MERCADERIAS - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60912",
+      "descripcion": "60912 - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6091201",
+      "descripcion": "6091201 - COST. VINC. - MERCADERIAS - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60913",
+      "descripcion": "60913 - DERECHOS ADUANEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6091301",
+      "descripcion": "6091301 - COST. VINC. - MERCADERIAS - DERECHOS ADUANEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60914",
+      "descripcion": "60914 - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6091401",
+      "descripcion": "6091401 - COST. VINC. - MERCADERIAS - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60919",
+      "descripcion": "60919 - OTROS COSTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6091901",
+      "descripcion": "6091901 - COST. VINC. - MERCADERIAS - OTROS COSTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6092",
+      "descripcion": "6092 - COSTOS VINCULADOS CON LAS COMPRAS DE MATERIAS PRIMAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60921",
+      "descripcion": "60921 - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6092101",
+      "descripcion": "6092101 - COST. VINC. - MATERIAS PRIMAS - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60922",
+      "descripcion": "60922 - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6092201",
+      "descripcion": "6092201 - COST. VINC. - MATERIAS PRIMAS - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60923",
+      "descripcion": "60923 - DERECHOS ADUANEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6092301",
+      "descripcion": "6092301 - COST. VINC. - MATERIAS PRIMAS - DERECHOS ADUANEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60924",
+      "descripcion": "60924 - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6092401",
+      "descripcion": "6092401 - COST. VINC. - MATERIAS PRIMAS - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60925",
+      "descripcion": "60925 - OTROS COSTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6092501",
+      "descripcion": "6092501 - COST. VINC. - MATERIAS PRIMAS - OTROS COSTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093",
+      "descripcion": "6093 - COSTOS VINCULADOS CON LAS COMPRAS DE MATERIALES, SUMINISTROS Y REPUESTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60931",
+      "descripcion": "60931 - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093101",
+      "descripcion": "6093101 - COST. VINC. CON LAS COMP. DE MAT. AUXIL. - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093102",
+      "descripcion": "6093102 - COST. VINC. CON LAS COMP. DE COMBUSTIBLE - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093103",
+      "descripcion": "6093103 - COST. VINC. CON LAS COMP. DE LUBRICANTES - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093104",
+      "descripcion": "6093104 - COST. VINC. CON LAS COMP. DE ENERGIA - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093105",
+      "descripcion": "6093105 - COST. VINC. CON LAS COMP. DE OTROS SUM. - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093106",
+      "descripcion": "6093106 - COST. VINC. CON LAS COMP. DE REPUESTOS - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60932",
+      "descripcion": "60932 - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093201",
+      "descripcion": "6093201 - COST. VINC. CON LAS COMP. DE MAT. AUXIL. - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093202",
+      "descripcion": "6093202 - COST. VINC. CON LAS COMP. DE COMBUSTIBLE - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093203",
+      "descripcion": "6093203 - COST. VINC. CON LAS COMP. DE LUBRICANTES - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093204",
+      "descripcion": "6093204 - COST. VINC. CON LAS COMP. DE ENERGIA - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093205",
+      "descripcion": "6093205 - COST. VINC. CON LAS COMP. DE OTROS SUM. - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093206",
+      "descripcion": "6093206 - COST. VINC. CON LAS COMP. DE REPUESTOS - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60933",
+      "descripcion": "60933 - DERECHOS ADUANEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093301",
+      "descripcion": "6093301 - COST. VINC. CON LAS COMP. DE MAT. AUXIL. - DER. ADUA."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093302",
+      "descripcion": "6093302 - COST. VINC. CON LAS COMP. DE COMBUSTIBLE - DER. ADUA."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093303",
+      "descripcion": "6093303 - COST. VINC. CON LAS COMP. DE LUBRICANTES - DER. ADUA."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093304",
+      "descripcion": "6093304 - COST. VINC. CON LAS COMP. DE ENERGIA - DER. ADUA."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093305",
+      "descripcion": "6093305 - COST. VINC. CON LAS COMP. DE OTROS SUM. - DER. ADUA."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093306",
+      "descripcion": "6093306 - COST. VINC. CON LAS COMP. DE REPUESTOS - DER. ADUA."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60934",
+      "descripcion": "60934 - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093401",
+      "descripcion": "6093401 - COST. VINC. CON LAS COMP. DE MAT. AUXIL. - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093402",
+      "descripcion": "6093402 - COST. VINC. CON LAS COMP. DE COMBUSTIBLE - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093403",
+      "descripcion": "6093403 - COST. VINC. CON LAS COMP. DE LUBRICANTES - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093404",
+      "descripcion": "6093404 - COST. VINC. CON LAS COMP. DE ENERGIA - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093405",
+      "descripcion": "6093405 - COST. VINC. CON LAS COMP. DE OTROS SUM. - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093406",
+      "descripcion": "6093406 - COST. VINC. CON LAS COMP. DE REPUESTOS - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60935",
+      "descripcion": "60935 - OTROS COSTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093501",
+      "descripcion": "6093501 - COST. VINC. CON LAS COMP. DE MAT. AUXIL. - OTROS COST."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093502",
+      "descripcion": "6093502 - COST. VINC. CON LAS COMP. DE COMBUSTIBLE - OTROS COST."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093503",
+      "descripcion": "6093503 - COST. VINC. CON LAS COMP. DE LUBRICANTES - OTROS COST."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093504",
+      "descripcion": "6093504 - COST. VINC. CON LAS COMP. DE ENERGIA - OTROS COST."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093505",
+      "descripcion": "6093505 - COST. VINC. CON LAS COMP. DE OTROS SUM. - OTROS COST."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6093506",
+      "descripcion": "6093506 - COST. VINC. CON LAS COMP. DE REPUESTOS - OTROS COST."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6094",
+      "descripcion": "6094 - COSTOS VINCULADOS CON LAS COMPRAS DE ENVASES Y EMBALAJES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60941",
+      "descripcion": "60941 - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6094101",
+      "descripcion": "6094101 - COST. VINC. CON LAS COMP. DE ENVASES - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6094102",
+      "descripcion": "6094102 - COST. VINC. CON LAS COMP. DE EMBALAJES - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60942",
+      "descripcion": "60942 - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6094201",
+      "descripcion": "6094201 - COST. VINC. CON LAS COMP. DE ENVASES - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6094202",
+      "descripcion": "6094202 - COST. VINC. CON LAS COMP. DE EMBALAJES - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60943",
+      "descripcion": "60943 - DERECHOS ADUANEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6094301",
+      "descripcion": "6094301 - COST. VINC. CON LAS COMP. DE ENVASES - DER. ADUA."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6094302",
+      "descripcion": "6094302 - COST. VINC. CON LAS COMP. DE EMBALAJES - DER. ADUA."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60944",
+      "descripcion": "60944 - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6094401",
+      "descripcion": "6094401 - COST. VINC. CON LAS COMP. DE ENVASES - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6094402",
+      "descripcion": "6094402 - COST. VINC. CON LAS COMP. DE EMBALAJES - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "60945",
+      "descripcion": "60945 - OTROS COSTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6094501",
+      "descripcion": "6094501 - OTROS COSTOS VINCULADOS CON LAS COMPRAS DE MERCADERIA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6094502",
+      "descripcion": "6094502 - OTROS COSTOS VINCULADOS CON LAS COMPRAS DE MATERIA PRIMA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6094503",
+      "descripcion": "6094503 - OTROS COSTOS VINC. CON LAS COMPRAS DE MAT. AUXILIARES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6111",
+      "descripcion": "6111 - MERCADERIAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6111001",
+      "descripcion": "6111001 - MERCADERIAS - VARIACION POR COMPRA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6121",
+      "descripcion": "6121 - MATERIAS PRIMAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6121001",
+      "descripcion": "6121001 - MATERIAS PRIMAS - VARIACION POR COMPRA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6121002",
+      "descripcion": "6121002 - MATERIAS PRIMAS - VARIACION POR CONSUMO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6131",
+      "descripcion": "6131 - MATERIALES AUXILIARES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6131001",
+      "descripcion": "6131001 - MATERIALES AUXILIARES - VARIACION POR COMPRA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6131002",
+      "descripcion": "6131002 - MATERIALES AUXILIARES - VARIACION POR CONSUMO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6132",
+      "descripcion": "6132 - SUMINISTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6132001",
+      "descripcion": "6132001 - SUMINISTROS - VARIACION POR COMPRA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6132002",
+      "descripcion": "6132002 - SUMINISTROS - VARIACION POR CONSUMO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6133",
+      "descripcion": "6133 - REPUESTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6133001",
+      "descripcion": "6133001 - REPUESTOS - VARIACION POR COMPRA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6133002",
+      "descripcion": "6133002 - REPUESTOS - VARIACION POR CONSUMO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6141",
+      "descripcion": "6141 - ENVASES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6141001",
+      "descripcion": "6141001 - ENVASES - VARIACION POR COMPRA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6141002",
+      "descripcion": "6141002 - ENVASES - VARIACION POR CONSUMO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6142",
+      "descripcion": "6142 - EMBALAJES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6142001",
+      "descripcion": "6142001 - EMBALAJES - VARIACION POR COMPRA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6142002",
+      "descripcion": "6142002 - EMBALAJES - VARIACION POR CONSUMO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6211",
+      "descripcion": "6211 - SUELDOS Y SALARIOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6211001",
+      "descripcion": "6211001 - SUELDOS Y SALARIOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6212",
+      "descripcion": "6212 - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6212001",
+      "descripcion": "6212001 - COMISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6213",
+      "descripcion": "6213 - REMUNERACIONES EN ESPECIE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6213001",
+      "descripcion": "6213001 - REMUNERACIONES EN ESPECIE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6214",
+      "descripcion": "6214 - GRATIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6214001",
+      "descripcion": "6214001 - GRATIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6215",
+      "descripcion": "6215 - VACACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6215001",
+      "descripcion": "6215001 - VACACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6220001",
+      "descripcion": "6220001 - OTRAS REMUNERACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6230001",
+      "descripcion": "6230001 - INDEMNIZACIONES AL PERSONAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6240001",
+      "descripcion": "6240001 - CAPACITACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6250001",
+      "descripcion": "6250001 - ATENCION AL PERSONAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6271",
+      "descripcion": "6271 - REGIMEN DE PRESTACIONES DE SALUD"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6271001",
+      "descripcion": "6271001 - REGIMEN DE PRESTACIONES DE SALUD"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6272",
+      "descripcion": "6272 - REGIMEN DE PENSIONES - APORTE DE EMPRESA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6272001",
+      "descripcion": "6272001 - REGIMEN DE PENSIONES - APORTE DE EMPRESA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6273",
+      "descripcion": "6273 - SCTR, ACCIDENTES DE TRABAJO Y ENFERMEDADES PROFESIONALES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6273001",
+      "descripcion": "6273001 - SCTR, ACCIDENTES DE TRAB. Y ENFERMEDADES PROFESIONALES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6274",
+      "descripcion": "6274 - SEGURO DE VIDA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6274001",
+      "descripcion": "6274001 - SEGURO DE VIDA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6275",
+      "descripcion": "6275 - SEGUROS PARTICULARES DE PRESTACIONES DE SALUD – EPS Y OTROS PARTICULARES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6275001",
+      "descripcion": "6275001 - SEG. PART. DE PREST. DE SALUD – EPS Y OTROS PART."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6276",
+      "descripcion": "6276 - CAJA DE BENEFICIOS DE SEGURIDAD SOCIAL DEL PESCADOR"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6276001",
+      "descripcion": "6276001 - CAJA DE BENEF. DE SEGURIDAD SOCIAL DEL PESCADOR"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6277",
+      "descripcion": "6277 - CONTRIBUCIONES AL SENATI"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6277001",
+      "descripcion": "6277001 - CONTRIBUCIONES AL SENATI"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6280001",
+      "descripcion": "6280001 - RETRIBUCIONES AL DIRECTORIO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6291",
+      "descripcion": "6291 - COMPENSACION POR TIEMPO DE SERVICIO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6291001",
+      "descripcion": "6291001 - COMPENSACION POR TIEMPO DE SERVICIO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6292",
+      "descripcion": "6292 - PENSIONES Y JUBILACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6292001",
+      "descripcion": "6292001 - PENSIONES Y JUBILACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6293",
+      "descripcion": "6293 - OTROS BENEFICIOS POST-EMPLEO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6293001",
+      "descripcion": "6293001 - OTROS BENEFICIOS POST-EMPLEO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6294",
+      "descripcion": "6294 - PARTICIPACION EN LAS UTILIDADES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "62941",
+      "descripcion": "62941 - PARTICIPACION CORRIENTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6294101",
+      "descripcion": "6294101 - PARTICIPACION CORRIENTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "62942",
+      "descripcion": "62942 - PARTICIPACION DIFERIDA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6294201",
+      "descripcion": "6294201 - PARTICIPACION DIFERIDA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6311",
+      "descripcion": "6311 - TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "63111",
+      "descripcion": "63111 - DE CARGA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6311101",
+      "descripcion": "6311101 - TRANSPORTE DE CARGA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "63112",
+      "descripcion": "63112 - DE PASAJEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6311201",
+      "descripcion": "6311201 - TRANSPORTE DE PASAJEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6312",
+      "descripcion": "6312 - CORREOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6312001",
+      "descripcion": "6312001 - CORREOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6313",
+      "descripcion": "6313 - ALOJAMIENTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6313001",
+      "descripcion": "6313001 - ALOJAMIENTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6314",
+      "descripcion": "6314 - ALIMENTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6314001",
+      "descripcion": "6314001 - ALIMENTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6315",
+      "descripcion": "6315 - OTROS GASTOS DE VIAJE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6315001",
+      "descripcion": "6315001 - OTROS GASTOS DE VIAJE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6321",
+      "descripcion": "6321 - ADMINISTRATIVA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6321001",
+      "descripcion": "6321001 - ASESORIA Y CONSULTORIA ADMINISTRATIVA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6322",
+      "descripcion": "6322 - LEGAL Y TRIBUTARIA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6322001",
+      "descripcion": "6322001 - ASESORIA Y CONSULTORIA LEGAL Y TRIBUTARIA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6323",
+      "descripcion": "6323 - AUDITORIA Y CONTABLE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6323001",
+      "descripcion": "6323001 - ASESORIA Y CONSULTORIA EN AUDITORIA Y CONTABILIDAD"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6324",
+      "descripcion": "6324 - MERCADOTECNIA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6324001",
+      "descripcion": "6324001 - ASESORIA Y CONSULTORIA EN MERCADOTECNIA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6325",
+      "descripcion": "6325 - MEDIOAMBIENTAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6325001",
+      "descripcion": "6325001 - ASESORIA Y CONSULTORIA MEDIOAMBIENTAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6326",
+      "descripcion": "6326 - INVESTIGACION Y DESARROLLO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6326001",
+      "descripcion": "6326001 - INVESTIGACION Y DESARROLLO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6327",
+      "descripcion": "6327 - PRODUCCION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6327001",
+      "descripcion": "6327001 - ASESORIA Y CONSULTORIA EN PRODUCCION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6329",
+      "descripcion": "6329 - OTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6329001",
+      "descripcion": "6329001 - OTROS SERVICIOS DE ASESORIA Y CONSULTORIA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6330001",
+      "descripcion": "6330001 - PRODUCCION ENCARGADA A TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6341",
+      "descripcion": "6341 - PROPIEDAD DE INVERSION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6341001",
+      "descripcion": "6341001 - MANTENIMIENTO Y REPARACIONES EN PROPIEDAD DE INVERSION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6342",
+      "descripcion": "6342 - ACTIVOS POR DERECHO DE USO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "63421",
+      "descripcion": "63421 - FINANCIERO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6342101",
+      "descripcion": "6342101 - MANT. Y REPARACION - ACTIVOS POR DERECHO DE USO - FINANCIERO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "63422",
+      "descripcion": "63422 - OPERATIVO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6342201",
+      "descripcion": "6342201 - MANT. Y REPARACION - ACTIVOS POR DERECHO DE USO - OPERATIVO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6343",
+      "descripcion": "6343 - PROPIEDAD, PLANTA Y EQUIPO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6343001",
+      "descripcion": "6343001 - MANT. Y REPARACION - ACTIVOS POR DERECHO DE USO - PPE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6344",
+      "descripcion": "6344 - INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6344001",
+      "descripcion": "6344001 - MANT. Y REPARACION - INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6345",
+      "descripcion": "6345 - ACTIVOS BIOLOGICOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6345001",
+      "descripcion": "6345001 - MANT. Y REPARACION - ACTIVOS BIOLOGICOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6351",
+      "descripcion": "6351 - TERRENOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6351001",
+      "descripcion": "6351001 - ALQUILER DE TERRENOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6352",
+      "descripcion": "6352 - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6352001",
+      "descripcion": "6352001 - ALQUILER DE EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6353",
+      "descripcion": "6353 - MAQUINARIAS Y EQUIPOS DE EXPLOTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6353001",
+      "descripcion": "6353001 - ALQUILER DE MAQUINARIAS Y EQUIPOS DE EXPLOTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6354",
+      "descripcion": "6354 - EQUIPO DE TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6354001",
+      "descripcion": "6354001 - ALQUILER DE EQUIPO DE TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6355",
+      "descripcion": "6355 - MUEBLES Y ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6355001",
+      "descripcion": "6355001 - ALQUILER DE MUEBLES Y ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6356",
+      "descripcion": "6356 - EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6356001",
+      "descripcion": "6356001 - ALQUILER DE EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6361",
+      "descripcion": "6361 - ENERGIA ELECTRICA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6361001",
+      "descripcion": "6361001 - ENERGIA ELECTRICA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6362",
+      "descripcion": "6362 - GAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6362001",
+      "descripcion": "6362001 - GAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6363",
+      "descripcion": "6363 - AGUA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6363001",
+      "descripcion": "6363001 - AGUA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6364",
+      "descripcion": "6364 - TELEFONO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6364001",
+      "descripcion": "6364001 - TELEFONO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6365",
+      "descripcion": "6365 - INTERNET"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6365001",
+      "descripcion": "6365001 - INTERNET"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6366",
+      "descripcion": "6366 - RADIO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6366001",
+      "descripcion": "6366001 - RADIO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6367",
+      "descripcion": "6367 - CABLE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6367001",
+      "descripcion": "6367001 - CABLE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6371",
+      "descripcion": "6371 - PUBLICIDAD"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6371001",
+      "descripcion": "6371001 - PUBLICIDAD"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6372",
+      "descripcion": "6372 - PUBLICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6372001",
+      "descripcion": "6372001 - PUBLICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6373",
+      "descripcion": "6373 - RELACIONES PUBLICAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6373001",
+      "descripcion": "6373001 - RELACIONES PUBLICAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6380001",
+      "descripcion": "6380001 - SERVICIOS DE CONTRATISTAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6391",
+      "descripcion": "6391 - GASTOS BANCARIOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6391001",
+      "descripcion": "6391001 - GASTOS BANCARIOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6392",
+      "descripcion": "6392 - GASTOS DE LABORATORIO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6392001",
+      "descripcion": "6392001 - GASTOS DE LABORATORIO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6411",
+      "descripcion": "6411 - IMPUESTO GENERAL A LAS VENTAS Y SELECTIVO AL CONSUMO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6411001",
+      "descripcion": "6411001 - IGV"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6411002",
+      "descripcion": "6411002 - ISC"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6412",
+      "descripcion": "6412 - IMPUESTO A LAS TRANSACCIONES FINANCIERAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6412001",
+      "descripcion": "6412001 - IMPUESTO A LAS TRANSACCIONES FINANCIERAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6413",
+      "descripcion": "6413 - IMPUESTO TEMPORAL A LOS ACTIVOS NETOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6413001",
+      "descripcion": "6413001 - IMPUESTO TEMPORAL A LOS ACTIVOS NETOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6414",
+      "descripcion": "6414 - IMPUESTO A LOS JUEGOS DE CASINO Y MAQUINAS TRAGAMONEDAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6414001",
+      "descripcion": "6414001 - IMP. A LOS JUEGOS DE CASINO Y MAQ. TRAGAMONEDAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6415",
+      "descripcion": "6415 - REGALIAS MINERAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6415001",
+      "descripcion": "6415001 - REGALIAS MINERAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6416",
+      "descripcion": "6416 - CANONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6416001",
+      "descripcion": "6416001 - CANONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6419",
+      "descripcion": "6419 - OTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6419001",
+      "descripcion": "6419001 - OTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6420001",
+      "descripcion": "6420001 - GOBIERNO REGIONAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6431",
+      "descripcion": "6431 - IMPUESTO PREDIAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6431001",
+      "descripcion": "6431001 - IMPUESTO PREDIAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6432",
+      "descripcion": "6432 - ARBITRIOS MUNICIPALES Y SEGURIDAD CIUDADANA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6432001",
+      "descripcion": "6432001 - ARBITRIOS MUNICIPALES Y SEGURIDAD CIUDADANA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6433",
+      "descripcion": "6433 - IMPUESTO AL PATRIMONIO VEHICULAR"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6433001",
+      "descripcion": "6433001 - IMPUESTO AL PATRIMONIO VEHICULAR"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6434",
+      "descripcion": "6434 - LICENCIA DE FUNCIONAMIENTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6434001",
+      "descripcion": "6434001 - LICENCIA DE FUNCIONAMIENTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6439",
+      "descripcion": "6439 - OTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6439001",
+      "descripcion": "6439001 - OTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6442",
+      "descripcion": "6442 - CONTRIBUCION AL SENCICO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6442001",
+      "descripcion": "6442001 - CONTRIBUCION AL SENCICO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6443",
+      "descripcion": "6443 - OTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6443001",
+      "descripcion": "6443001 - OTROS GASTOS POR TRIBUTOS - OTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6451",
+      "descripcion": "6451 - INTERESES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6452",
+      "descripcion": "6452 - INTERESES - FRACCIONAMIENTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6452001",
+      "descripcion": "6452001 - GASTOS EN DEUDA TRIBUTARIA - INTERESES - FRACCIONAMIENTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6453",
+      "descripcion": "6453 - MULTAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6453001",
+      "descripcion": "6453001 - GASTOS EN DEUDA TRIBUTARIA - MULTAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6454",
+      "descripcion": "6454 - COSTAS Y OTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6454001",
+      "descripcion": "6454001 - GASTOS EN DEUDA TRIBUTARIA - COSTAS Y OTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6510001",
+      "descripcion": "6510001 - SEGUROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6520001",
+      "descripcion": "6520001 - REGALIAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6530001",
+      "descripcion": "6530001 - SUSCRIPCIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6540001",
+      "descripcion": "6540001 - LICENCIAS Y DERECHOS DE VIGENCIA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6551",
+      "descripcion": "6551 - COSTO NETO DE ENAJENACION DE ACTIVOS INMOVILIZADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "65511",
+      "descripcion": "65511 - INVERSIONES MOBILIARIAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6551101",
+      "descripcion": "6551101 - COSTO NETO DE ENAJENACION DE INVERSIONES MOBILIARIAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "65512",
+      "descripcion": "65512 - PROPIEDADES DE INVERSION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6551201",
+      "descripcion": "6551201 - COSTO NETO DE ENAJENACION DE PROPIEDADES DE INVERSION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "65513",
+      "descripcion": "65513 - ACTIVOS POR DERECHO DE USO - ARRENDAMIENTO FINANCIERO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6551301",
+      "descripcion": "6551301 - COSTO NETO DE ENAJEN. DE ACTV. POR DER. DE USO - ARREND. FINANCIERO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "65514",
+      "descripcion": "65514 - PROPIEDAD, PLANTA Y EQUIPO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6551401",
+      "descripcion": "6551401 - COSTO NETO DE ENAJENACION DE PROPIEDAD, PLANTA Y EQUIPO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "65515",
+      "descripcion": "65515 - INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6551501",
+      "descripcion": "6551501 - COSTO NETO DE ENAJENACION DE INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "65516",
+      "descripcion": "65516 - ACTIVOS BIOLOGICOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6551601",
+      "descripcion": "6551601 - COSTO NETO DE ENAJENACION DE ACTIVOS BIOLOGICOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6552",
+      "descripcion": "6552 - OPERACIONES DISCONTINUADAS – ABANDONO DE ACTIVOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "65521",
+      "descripcion": "65521 - PROPIEDADES DE INVERSION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6552101",
+      "descripcion": "6552101 - COSTO DE ENAJEN. DE OPER. DISC. - PROPIEDADES DE INVERSION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "65522",
+      "descripcion": "65522 - ACTIVOS POR DERECHO DE USO - ARRENDAMIENTO FINANCIERO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6552201",
+      "descripcion": "6552201 - COSTO DE ENAJEN. DE OPER. DISC. - ACTV. X DER. DE USO - ARREND. FIN."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "65523",
+      "descripcion": "65523 - PROPIEDAD, PLANTA Y EQUIPO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6552301",
+      "descripcion": "6552301 - COSTO DE ENAJEN. DE OPER. DISC. - PROPIEDAD, PLANTA Y EQUIPO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "65524",
+      "descripcion": "65524 - INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6552401",
+      "descripcion": "6552401 - COSTO DE ENAJEN. DE OPER. DISC. - INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "65525",
+      "descripcion": "65525 - ACTIVOS BIOLOGICOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6552501",
+      "descripcion": "6552501 - COSTO DE ENAJEN. DE OPER. DISC. - ACTIVOS BIOLOGICOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6560001",
+      "descripcion": "6560001 - UTILES DE OFICINA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6560002",
+      "descripcion": "6560002 - UTILES DE ASEO PERSONAL Y LIMPIEZA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6560003",
+      "descripcion": "6560003 - SUMINISTROS DE FERRETERIA, REPUESTOS, PARTES Y MATERIALES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6560005",
+      "descripcion": "6560005 - COMBUSTIBLES,LUBRICANTES,OXIGENO GAS,OTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6560007",
+      "descripcion": "6560007 - HERRAMIENTAS, INSTRUMENTOS Y EQUIPOS MOVILES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6560008",
+      "descripcion": "6560008 - MATERIALES DE MANTENIMIENTO DE LOCAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6560009",
+      "descripcion": "6560009 - OTROS SUMINISTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6580001",
+      "descripcion": "6580001 - GESTION MEDIOAMBIENTAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6590001",
+      "descripcion": "6590001 - OTROS GASTOS DE GESTION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6591",
+      "descripcion": "6591 - DONACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6591001",
+      "descripcion": "6591001 - DONACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6592",
+      "descripcion": "6592 - SANCIONES ADMINISTRATIVAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6592001",
+      "descripcion": "6592001 - SANCIONES ADMINISTRATIVAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6611",
+      "descripcion": "6611 - MERCADERIAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6611001",
+      "descripcion": "6611001 - ACTIVO REALIZABLE MERCADERIAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6612",
+      "descripcion": "6612 - PRODUCTOS TERMINADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6612001",
+      "descripcion": "6612001 - ACTIVO REALIZABLE PRODUCTOS TERMINADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6613",
+      "descripcion": "6613 - ACTIVOS NO CORRIENTES MANTENIDOS PARA LA VENTA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "66131",
+      "descripcion": "66131 - PROPIEDADES DE INVERSION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6613101",
+      "descripcion": "6613101 - PROPIEDADES DE INVERSION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "66132",
+      "descripcion": "66132 - PROPIEDAD, PLANTA Y EQUIPO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6613201",
+      "descripcion": "6613201 - PROPIEDAD, PLANTA Y EQUIPO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "66133",
+      "descripcion": "66133 - INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6613301",
+      "descripcion": "6613301 - INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "66134",
+      "descripcion": "66134 - ACTIVOS BIOLOGICOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6613401",
+      "descripcion": "6613401 - ACTIVOS BIOLOGICOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6621",
+      "descripcion": "6621 - PROPIEDADES DE INVERSION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6621001",
+      "descripcion": "6621001 - PROPIEDADES DE INVERSION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6622",
+      "descripcion": "6622 - ACTIVOS BIOLOGICOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6622001",
+      "descripcion": "6622001 - ACTIVOS BIOLOGICOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6711",
+      "descripcion": "6711 - PRESTAMOS DE INSTITUCIONES FINANCIERAS Y OTRAS ENTIDADES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6711001",
+      "descripcion": "6711001 - PRESTAMOS DE INST. FINANCIERAS  Y OTRAS ENTIDADES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6712",
+      "descripcion": "6712 - CONTRATOS DE ARRENDAMIENTO FINANCIERO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6712001",
+      "descripcion": "6712001 - CONTRATOS DE ARRENDAMIENTO FINANCIERO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6713",
+      "descripcion": "6713 - EMISION Y COLOCACION DE INSTRUMENTOS REPRESENTATIVOS DE DEUDA Y PATRIMONIO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6713001",
+      "descripcion": "6713001 - EMI. COLOCACION DE INSTR. REPRE. DE DEUDA Y PATRIM."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6714",
+      "descripcion": "6714 - DOCUMENTOS VENDIDOS O DESCONTADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6714001",
+      "descripcion": "6714001 - DOCUMENTOS VENDIDOS O DESCONTADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6720001",
+      "descripcion": "6720001 - PERDIDA POR INSTRUMENTOS FINANCIEROS DERIVADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6731",
+      "descripcion": "6731 - PRESTAMOS DE INSTITUCIONES FINANCIERAS Y OTRAS ENTIDADES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "67311",
+      "descripcion": "67311 - INSTITUCIONES FINANCIERAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6731101",
+      "descripcion": "6731101 - INSTITUCIONES FINANCIERAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "67312",
+      "descripcion": "67312 - OTRAS ENTIDADES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6731201",
+      "descripcion": "6731201 - OTRAS ENTIDADES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6732",
+      "descripcion": "6732 - CONTRATOS DE ARRENDAMIENTO FINANCIERO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6732001",
+      "descripcion": "6732001 - CONTRATOS DE ARRENDAMIENTO FINANCIERO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6733",
+      "descripcion": "6733 - OTROS INSTRUMENTOS FINANCIEROS POR PAGAR"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6733001",
+      "descripcion": "6733001 - OTROS INSTRUMENTOS FINANCIEROS POR PAGAR"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6734",
+      "descripcion": "6734 - DOCUMENTOS VENDIDOS O DESCONTADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6734001",
+      "descripcion": "6734001 - DOCUMENTOS VENDIDOS O DESCONTADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6735",
+      "descripcion": "6735 - OBLIGACIONES EMITIDAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6735001",
+      "descripcion": "6735001 - OBLIGACIONES EMITIDAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6736",
+      "descripcion": "6736 - OBLIGACIONES COMERCIALES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6736001",
+      "descripcion": "6736001 - OBLIGACIONES COMERCIALES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6741",
+      "descripcion": "6741 - PERDIDA EN INSTRUMENTOS VENDIDOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6741001",
+      "descripcion": "6741001 - PERDIDA EN INSTRUMENTOS VENDIDOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6750001",
+      "descripcion": "6750001 - DESCUENTOS CONCEDIDOS POR PRONTO PAGO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6760001",
+      "descripcion": "6760001 - PERDIDA POR DIFERENCIA DE CAMBIO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6760002",
+      "descripcion": "6760002 - PERDIDA POR REDONDEO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6771",
+      "descripcion": "6771 - INVERSIONES MANTENIDAS PARA NEGOCIACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6771001",
+      "descripcion": "6771001 - INVERSIONES MANTENIDAS PARA NEGOCIACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6772",
+      "descripcion": "6772 - OTRAS INVERSIONES FINANCIERAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6772001",
+      "descripcion": "6772001 - OTRAS INVERSIONES FINANCIERAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6773",
+      "descripcion": "6773 - OTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6773001",
+      "descripcion": "6773001 - OTROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6781",
+      "descripcion": "6781 - PARTIC. EN LOS RESULT. DE SUBSID. Y ASOC. BAJO EL METD. DEL VALOR PATRIM."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6781001",
+      "descripcion": "6781001 - PARTIC. EN LOS RESULT. DE SUBSID. Y ASOC. BAJO EL METD. DEL VALOR PATRIM."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6782",
+      "descripcion": "6782 - PARTICIPACIONES EN NEGOCIOS CONJUNTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6782001",
+      "descripcion": "6782001 - PARTICIPACIONES EN NEGOCIOS CONJUNTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6791",
+      "descripcion": "6791 - PRIMAS POR OPCIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6791001",
+      "descripcion": "6791001 - PRIMAS POR OPCIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6792",
+      "descripcion": "6792 - GASTOS FINANCIEROS EN MEDICION A VALOR DESCONTADO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6792001",
+      "descripcion": "6792001 - GASTOS FINANCIEROS EN MEDICION A VALOR DESCONTADO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6793",
+      "descripcion": "6793 - GASTOS FINANCIEROS EN ACTUALIZACION DE ACTV. POR DERECHO DE USO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6793001",
+      "descripcion": "6793001 - GASTOS FINANCIEROS EN ACTUALIZACION DE ACTV. POR DERECHO DE USO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6811",
+      "descripcion": "6811 - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68111",
+      "descripcion": "68111 - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6811101",
+      "descripcion": "6811101 - DEPRECIACION DE PDI. - EDIFICACIONES - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68112",
+      "descripcion": "68112 - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6811201",
+      "descripcion": "6811201 - DEPRECIACION DE PDI. - EDIFICACIONES - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68113",
+      "descripcion": "68113 - COSTO DE FINANCIACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6811301",
+      "descripcion": "6811301 - DEPRECIACION DE PDI. - EDIFICACIONES - COSTO DE FINANCIACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6821",
+      "descripcion": "6821 - PROPIEDADES DE INVERSION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68211",
+      "descripcion": "68211 - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682111",
+      "descripcion": "682111 - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6821111",
+      "descripcion": "6821111 - DEPR. X DER. DE USO ARREND. FINANC. PDI - EDIFICACIONES - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682112",
+      "descripcion": "682112 - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6821121",
+      "descripcion": "6821121 - DEPR. X DER. DE USO ARREND. FINANC. PDI - EDIFICACIONES - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682113",
+      "descripcion": "682113 - COSTO DE FINANCIACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6821131",
+      "descripcion": "6821131 - DEPR. X DER. DE USO ARREND. FINANC. PDI - EDIFICACIONES - COSTO DE FINANC."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6822",
+      "descripcion": "6822 - PROPIEDAD, PLANTA Y EQUIPO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68221",
+      "descripcion": "68221 - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682211",
+      "descripcion": "682211 - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6822111",
+      "descripcion": "6822111 - DEPR. DE ACTV. X DER. DE USO PPE - EDIFICACIONES - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682212",
+      "descripcion": "682212 - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6822121",
+      "descripcion": "6822121 - DEPR. DE ACTV. X DER. DE USO PPE - EDIFICACIONES - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682213",
+      "descripcion": "682213 - COSTO DE FINANCIACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6822131",
+      "descripcion": "6822131 - DEPR. DE ACTV. X DER. DE USO PPE - EDIFICACIONES - COSTO FINANCIACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68222",
+      "descripcion": "68222 - MAQUINARIAS Y EQUIPOS DE EXPLOTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682221",
+      "descripcion": "682221 - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6822211",
+      "descripcion": "6822211 - DEPR. DE ACTV. X DER. DE USO PPE - MAQ. Y EQUIPO DE EXPLOT.- COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682222",
+      "descripcion": "682222 - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6822221",
+      "descripcion": "6822221 - DEPR. DE ACTV. X DER. DE USO PPE - MAQ. Y EQUIPO DE EXPLOT.- REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682223",
+      "descripcion": "682223 - COSTO DE FINANCIACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6822231",
+      "descripcion": "6822231 - DEPR. DE ACTV. X DER. DE USO PPE - MAQ. Y EQUIPO DE EXPLOT.- COSTO FINANC."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68223",
+      "descripcion": "68223 - UNIDADES DE TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682231",
+      "descripcion": "682231 - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6822311",
+      "descripcion": "6822311 - DEPR. DE ACTV. X DER. DE USO PPE - UNID. DE TRANSPORTE - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682232",
+      "descripcion": "682232 - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6822321",
+      "descripcion": "6822321 - DEPR. DE ACTV. X DER. DE USO PPE - UNID. DE TRANSPORTE - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68225",
+      "descripcion": "68225 - EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682251",
+      "descripcion": "682251 - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6822511",
+      "descripcion": "6822511 - DEPR. DE ACTV. X DER. DE USO PPE - EQUIP. DIVERSOS - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "682252",
+      "descripcion": "682252 - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6822521",
+      "descripcion": "6822521 - DEPR. DE ACTV. X DER. DE USO PPE - EQUIP. DIVERSOS - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6831",
+      "descripcion": "6831 - DEPRECIACION DE ACTIVOS POR DERECHO DE USO - ARRENDAMIENTO OPERATIVO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68311",
+      "descripcion": "68311 - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "683111",
+      "descripcion": "683111 - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6831111",
+      "descripcion": "6831111 - DEPR. ACTV. X DDU -ARREND. OPER. - EDIFICACIONES - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "683112",
+      "descripcion": "683112 - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6831121",
+      "descripcion": "6831121 - DEPR. ACTV. X DDU -ARREND. OPER. - EDIFICACIONES - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68312",
+      "descripcion": "68312 - MAQUINARIAS Y EQUIPOS DE EXPLOTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "683121",
+      "descripcion": "683121 - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6831211",
+      "descripcion": "6831211 - DEPR. ACTV. X DDU -ARREND. OPER. - MAQ. Y EQUIP. DE EXPLOT. - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "683122",
+      "descripcion": "683122 - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6831221",
+      "descripcion": "6831221 - DEPR. ACTV. X DDU -ARREND. OPER. - MAQ. Y EQUIP. DE EXPLOT. - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68313",
+      "descripcion": "68313 - UNIDADES DE TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "683131",
+      "descripcion": "683131 - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6831311",
+      "descripcion": "6831311 - DEPR. ACTV. X DDU -ARREND. OPER. - UNID. DE TRANS. - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "683132",
+      "descripcion": "683132 - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6831321",
+      "descripcion": "6831321 - DEPR. ACTV. X DDU -ARREND. OPER. - UNID. DE TRANS. - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68315",
+      "descripcion": "68315 - EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "683151",
+      "descripcion": "683151 - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6831511",
+      "descripcion": "6831511 - DEPR. ACTV. X DDU -ARREND. OPER. - EQUIPOS DIVERSOS - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "683152",
+      "descripcion": "683152 - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6831521",
+      "descripcion": "6831521 - DEPR. ACTV. X DDU -ARREND. OPER. - EQUIPOS DIVERSOS - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6841",
+      "descripcion": "6841 - DEPRECIACION DE PROPIEDAD, PLANTA Y EQUIPO - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68410",
+      "descripcion": "68410 - PLANTAS PRODUCTORAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6841001",
+      "descripcion": "6841001 - DEPR. DE PPE - COSTO - PLANTAS PRODUCTORAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68411",
+      "descripcion": "68411 - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6841101",
+      "descripcion": "6841101 - DEPR. DE PPE - COSTO - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68412",
+      "descripcion": "68412 - MAQUINARIAS Y EQUIPOS DE EXPLOTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6841201",
+      "descripcion": "6841201 - DEPR. DE PPE - COSTO - MAQ. Y EQ DE EXPLOTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68413",
+      "descripcion": "68413 - UNIDADES DE TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6841301",
+      "descripcion": "6841301 - DEPR. DE PPE - COSTO - UNIDADES DE TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68414",
+      "descripcion": "68414 - MUEBLES Y ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6841401",
+      "descripcion": "6841401 - DEPR. DE PPE - COSTO - MUEBLES Y ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68415",
+      "descripcion": "68415 - EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6841501",
+      "descripcion": "6841501 - DEPR. DE PPE - COSTO - EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68416",
+      "descripcion": "68416 - HERRAMIENTAS Y UNIDADES DE REEMPLAZO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6841601",
+      "descripcion": "6841601 - DEPR. DE PPE - COSTO - HERRAMIENTAS Y UNID. DE REEMPLAZO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6842",
+      "descripcion": "6842 - DEPRECIACION DE PROPIEDAD, PLANTA Y EQUIPO - REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68420",
+      "descripcion": "68420 - PLANTAS PRODUCTORAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6842001",
+      "descripcion": "6842001 - DEPR. DE PPE - REVALUACION - PLANTAS PRODUCTORAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68421",
+      "descripcion": "68421 - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6842101",
+      "descripcion": "6842101 - DEPR. DE PPE - REVALUACION - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68422",
+      "descripcion": "68422 - MAQUINARIAS Y EQUIPOS DE EXPLOTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6842201",
+      "descripcion": "6842201 - DEPR. DE PPE - REVALUACION - MAQ. Y EQUIPO DE EXPLOTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68423",
+      "descripcion": "68423 - UNIDADES DE TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6842301",
+      "descripcion": "6842301 - DEPR. DE PPE - REVALUACION - UNIDADES DE TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68424",
+      "descripcion": "68424 - MUEBLES Y ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6842401",
+      "descripcion": "6842401 - DEPR. DE PPE - REVALUACION - MUEBLES Y ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68425",
+      "descripcion": "68425 - EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6842501",
+      "descripcion": "6842501 - DEPR. DE PPE - REVALUACION - EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68426",
+      "descripcion": "68426 - HERRAMIENTAS Y UNIDADES DE REEMPLAZO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6842601",
+      "descripcion": "6842601 - DEPR. DE PPE - REVALUACION - HERRAMIENTAS Y UNID. DE REEMPLAZO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6843",
+      "descripcion": "6843 - DEPRECIACION DE PROPIEDAD, PLANTA Y EQUIPO - COSTOS DE FINANCIACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68430",
+      "descripcion": "68430 - PLANTAS PRODUCTORAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6843001",
+      "descripcion": "6843001 - DEPR. DE PPE - COSTOS DE FINANC. - PLANTAS PRODUCTORAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68431",
+      "descripcion": "68431 - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6843101",
+      "descripcion": "6843101 - DEPR. DE PPE - COSTOS DE FINANC. - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68432",
+      "descripcion": "68432 - MAQUINARIAS Y EQUIPOS DE EXPLOTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6843201",
+      "descripcion": "6843201 - DEPR. DE PPE - COSTOS DE FINANC. - MAQ. Y EQUIP. DE EXPLOT."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6851",
+      "descripcion": "6851 - DEPRECIACION DE ACTIVOS BIOLOGICOS EN PRODUCCION - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68511",
+      "descripcion": "68511 - ACTIVOS BIOLOGICOS DE ORIGEN ANIMAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6851101",
+      "descripcion": "6851101 - DEPR. DE ACTV. BIOL. EN PRODUC. DE ORIGEN ANIMAL - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68512",
+      "descripcion": "68512 - ACTIVOS BIOLOGICOS DE ORIGEN VEGETAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6851201",
+      "descripcion": "6851201 - DEPR. DE ACTV. BIOL. EN PRODUC. DE ORIGEN VEGETAL - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6852",
+      "descripcion": "6852 - DEPRECIACION DE ACTIVOS BIOLOGICOS EN PRODUCCION - COSTO DE FINANCIACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68521",
+      "descripcion": "68521 - ACTIVOS BIOLOGICOS DE ORIGEN ANIMAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6852101",
+      "descripcion": "6852101 - DEPR. DE ACTV. BIOL. EN PRODUC. DE ORIGEN ANIMAL - COSTO DE FINANC."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68522",
+      "descripcion": "68522 - ACTIVOS BIOLOGICOS DE ORIGEN VEGETAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6852201",
+      "descripcion": "6852201 - DEPR. DE ACTV. BIOL. EN PRODUC. DE ORIGEN VEGETAL - COSTO DE FINANC."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6861",
+      "descripcion": "6861 - AMORTIZACION DE INTANGIBLES – COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68611",
+      "descripcion": "68611 - CONCESIONES, LICENCIAS Y OTROS DERECHOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6861101",
+      "descripcion": "6861101 - AMORT. DE INTAN. - COSTO - CONCECIONES, LICENCIAS Y OTROS DER."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68612",
+      "descripcion": "68612 - PATENTES Y PROPIEDAD INDUSTRIAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6861201",
+      "descripcion": "6861201 - AMORT. DE INTAN. - COSTO - PATENTES Y PROPIEDAD INDUSTRIAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68613",
+      "descripcion": "68613 - PROGRAMAS DE COMPUTADORA (SOFTWARE)"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6861301",
+      "descripcion": "6861301 - AMORT. DE INTAN. - COSTO - PROG. DE COMPUTADORA (SOFTWARE)"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68614",
+      "descripcion": "68614 - COSTOS DE EXPLORACION Y DESARROLLO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6861401",
+      "descripcion": "6861401 - AMORT. DE INTAN. - COSTO - COSTOS DE EXPLOR. Y DESARROLLO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68615",
+      "descripcion": "68615 - FORMULAS, DISEÑOS Y PROTOTIPOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6861501",
+      "descripcion": "6861501 - AMORT. DE INTAN. - COSTO - FORMULAS, DISEÑOS Y PROTOTIPOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68619",
+      "descripcion": "68619 - OTROS ACTIVOS INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6861901",
+      "descripcion": "6861901 - AMORT. DE INTAN. - COSTO - OTROS ACTIVOS INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6862",
+      "descripcion": "6862 - AMORTIZACION DE INTANGIBLES – REVALUACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68621",
+      "descripcion": "68621 - CONCESIONES, LICENCIAS Y OTROS DERECHOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6862101",
+      "descripcion": "6862101 - AMORT. DE INTAN. REVAL. - CONCECIONES LICENCIAS Y OTROS DER."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68622",
+      "descripcion": "68622 - PATENTES Y PROPIEDAD INDUSTRIAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6862201",
+      "descripcion": "6862201 - AMORT. DE INTAN. REVAL. - PATENTES Y PROPIEDAD INDUSTRIAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68623",
+      "descripcion": "68623 - PROGRAMAS DE COMPUTADORA (SOFTWARE)"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6862301",
+      "descripcion": "6862301 - AMORT. DE INTAN. REVAL. - PROG. DE COMPUTADORA (SOFTWARE)"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68624",
+      "descripcion": "68624 - COSTOS DE EXPLORACION Y DESARROLLO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6862401",
+      "descripcion": "6862401 - AMORT. DE INTAN. REVAL. - COSTOS DE EXPLOR. Y DESARROLLO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68625",
+      "descripcion": "68625 - FORMULAS, DISEÑOS Y PROTOTIPOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6862501",
+      "descripcion": "6862501 - AMORT. DE INTAN. REVAL. - FORMULAS, DISEÑOS Y PROTOTIPOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68629",
+      "descripcion": "68629 - OTROS ACTIVOS INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6862901",
+      "descripcion": "6862901 - AMORT. DE INTAN. REVAL. - OTROS ACTIVOS INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6871",
+      "descripcion": "6871 - ESTIMACION DE CUENTAS DE COBRANZA DUDOSA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68711",
+      "descripcion": "68711 - CUENTAS POR COBRAR COMERCIALES – TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6871101",
+      "descripcion": "6871101 - ESTIM. DE CTAS. X COB. COMER. DUDOSAS - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68712",
+      "descripcion": "68712 - CUENTAS POR COBRAR COMERCIALES - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6871201",
+      "descripcion": "6871201 - ESTIM. DE CTAS. X COB. COMER. DUDOSAS - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68713",
+      "descripcion": "68713 - CUENTAS POR COBRAR AL PERSONAL, A LOS ACCIONISTAS (SOCIOS) Y DIRECTORES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6871301",
+      "descripcion": "6871301 - ESTIM. DE CXC. DUDOSAS AL PERSONAL, ACCIONISTAS (SOCIOS) Y DIRECTORES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68714",
+      "descripcion": "68714 - CUENTAS POR COBRAR DIVERSAS – TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6871401",
+      "descripcion": "6871401 - ESTIM. DE CTAS. X COB. DIVERSAS DUDOSAS - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68715",
+      "descripcion": "68715 - CUENTAS POR COBRAR DIVERSAS – RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6871501",
+      "descripcion": "6871501 - ESTIM. DE CTAS. X COB. DIVERSAS DUDOSAS - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6873",
+      "descripcion": "6873 - DESVALORIZACION DE INVERSIONES MOBILIARIAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68731",
+      "descripcion": "68731 - INVERSIONES A SER MANTENIDAS HASTA EL VENCIMIENTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6873101",
+      "descripcion": "6873101 - DESVAL. DE INVER. MOBILIARIAS A SER MANT. HASTA EL VENCIMIENTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68732",
+      "descripcion": "68732 - INSTRUMENTOS FINANCIEROS REPRESENTATIVOS DE DERECHO PATRIMONIAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6873201",
+      "descripcion": "6873201 - DESVAL. DE INSTRU. FINANCIEROS REPREST. DE DER. PATRIMONIAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6881",
+      "descripcion": "6881 - DESVALORIZACION DE PROPIEDAD DE INVERSION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68812",
+      "descripcion": "68812 - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6881201",
+      "descripcion": "6881201 - DESVAL. DE PDI - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68813",
+      "descripcion": "68813 - CONSTRUCCIONES EN CURSO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6881301",
+      "descripcion": "6881301 - DESVAL. DE PDI - CONSTRUCCIONES EN CURSO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6882",
+      "descripcion": "6882 - DESVALORIZACION DE ACTIVOS POR DERECHO DE USO - ARRENDAMIENTO FINANCIERO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68820",
+      "descripcion": "68820 - PLANTA PRODUCTORA EN PRODUCCION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6882001",
+      "descripcion": "6882001 - DESVAL. DE ACTV. X DDU - ARREND. FINANC. - PLANTA PROD. EN PRODUCCION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68821",
+      "descripcion": "68821 - PLANTA PRODUCTORA EN DESARROLLO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6882101",
+      "descripcion": "6882101 - DESVAL. DE ACTV. X DDU - ARREND. FINANC. - PLANTA PROD. EN DESARROLLO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68822",
+      "descripcion": "68822 - TERRENOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6882201",
+      "descripcion": "6882201 - DESVAL. DE ACTV. X DDU - ARREND. FINANC. - TERRENOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68823",
+      "descripcion": "68823 - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6882301",
+      "descripcion": "6882301 - DESVAL. DE ACTV. X DDU - ARREND. FINANC. - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68824",
+      "descripcion": "68824 - MAQUINARIAS Y EQUIPOS DE EXPLOTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6882401",
+      "descripcion": "6882401 - DESVAL. DE ACTV. X DDU - ARREND. FINANC. - MAQ. Y EQUIPO DE EXPLOT."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68825",
+      "descripcion": "68825 - UNIDADES DE TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6882501",
+      "descripcion": "6882501 - DESVAL. DE ACTV. X DDU - ARREND. FINANC. - UNID. DE TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68826",
+      "descripcion": "68826 - MUEBLES Y ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6882601",
+      "descripcion": "6882601 - DESVAL. DE ACTV. X DDU - ARREND. FINANC. - MUEBLES Y ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68827",
+      "descripcion": "68827 - EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6882701",
+      "descripcion": "6882701 - DESVAL. DE ACTV. X DDU - ARREND. FINANC. - EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68828",
+      "descripcion": "68828 - HERRAMIENTAS Y UNIDADES DE REEMPLAZO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6882801",
+      "descripcion": "6882801 - DESVAL. DE ACTV. X DDU - ARREND. FINANC. - HERR. Y UNID. DE REEMPLAZO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6883",
+      "descripcion": "6883 - DESVALORIZACION DE PROPIEDAD, PLANTA Y EQUIPO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68830",
+      "descripcion": "68830 - PLANTA PRODUCTORA EN PRODUCCION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6883001",
+      "descripcion": "6883001 - DESVAL. DE PPE - PLANTA PRODUCTORA EN PRODUCCION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68831",
+      "descripcion": "68831 - PLANTA PRODUCTORA EN DESARROLLO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6883101",
+      "descripcion": "6883101 - DESVAL. DE PPE - PLANTA PRODUCTORA EN DESARROLLO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68832",
+      "descripcion": "68832 - TERRENOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6883201",
+      "descripcion": "6883201 - DESVAL. DE PPE - TERRENOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68833",
+      "descripcion": "68833 - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6883301",
+      "descripcion": "6883301 - DESVAL. DE PPE - EDIFICACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68834",
+      "descripcion": "68834 - MAQUINARIAS Y EQUIPOS DE EXPLOTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6883401",
+      "descripcion": "6883401 - DESVAL. DE PPE - MAQ.  Y EQUIPO DE EXPLOTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68835",
+      "descripcion": "68835 - UNIDADES DE TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6883501",
+      "descripcion": "6883501 - DESVAL. DE PPE - UNIDADES DE TRANSPORTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68836",
+      "descripcion": "68836 - MUEBLES Y ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6883601",
+      "descripcion": "6883601 - DESVAL. DE PPE - MUEBLES Y ENSERES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68837",
+      "descripcion": "68837 - EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6883701",
+      "descripcion": "6883701 - DESVAL. DE PPE - EQUIPOS DIVERSOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68838",
+      "descripcion": "68838 - HERRAMIENTAS Y UNIDADES DE REEMPLAZO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6883801",
+      "descripcion": "6883801 - DESVAL. DE PPE - HERRMIENTAS Y UNID. DE REEMPLAZO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6884",
+      "descripcion": "6884 - DESVALORIZACION DE INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68841",
+      "descripcion": "68841 - CONCESIONES, LICENCIAS Y OTROS DERECHOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6884101",
+      "descripcion": "6884101 - DESVAL. DE CONCESIONES, LICENCIAS Y OTROS DERECHOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68842",
+      "descripcion": "68842 - PATENTES Y PROPIEDAD INDUSTRIAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6884201",
+      "descripcion": "6884201 - DESVAL. DE PATENTES Y PROPIEDAD INDUSTRIAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68843",
+      "descripcion": "68843 - PROGRAMAS DE COMPUTADORA (SOFTWARE)"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6884301",
+      "descripcion": "6884301 - DESVAL. DE PROGRAMAS DE COMPUTADORA (SOFTWARE)"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68844",
+      "descripcion": "68844 - COSTOS DE EXPLORACION Y DESARROLLO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6884401",
+      "descripcion": "6884401 - DESVAL. DE COSTOS DE EXPLORACION Y DESARROLLO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68845",
+      "descripcion": "68845 - FORMULAS, DISEÑOS Y PROTOTIPOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6884501",
+      "descripcion": "6884501 - DESVAL. DE FORMULAS, DISEÑOS Y PROTOTIPOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68846",
+      "descripcion": "68846 - OTROS ACTIVOS INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6884601",
+      "descripcion": "6884601 - DESVAL. DE OTROS ACTIVOS INTANGIBLES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68847",
+      "descripcion": "68847 - PLUSVALIA MERCANTIL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6884701",
+      "descripcion": "6884701 - DESVAL. DE PLUSVALIA MERCANTIL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6889",
+      "descripcion": "6889 - DESVALORIZACION DE ACTIVOS BIOLOGICOS EN PRODUCCION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68891",
+      "descripcion": "68891 - ACTIVOS BIOLOGICOS DE ORIGEN ANIMAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6889101",
+      "descripcion": "6889101 - DESVAL. DE ACT. BIOL. EN PRODUCCION DE ORIGEN ANIMAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68892",
+      "descripcion": "68892 - ACTIVOS BIOLOGICOS DE ORIGEN VEGETAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6889201",
+      "descripcion": "6889201 - DESVAL. DE ACT. BIOL. EN PRODUCCION DE ORIGEN VEGETAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6891",
+      "descripcion": "6891 - PROVISION PARA LITIGIOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68911",
+      "descripcion": "68911 - PROVISION PARA LITIGIOS – COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6891101",
+      "descripcion": "6891101 - PROVISION PARA LITIGIOS – COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68912",
+      "descripcion": "68912 - PROVISION PARA LITIGIOS – ACTUALIZACION FINANCIERA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6891201",
+      "descripcion": "6891201 - PROVISION PARA LITIGIOS – ACTUALIZACION FINANCIERA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6892",
+      "descripcion": "6892 - PROVIS. POR DESMANT., RETIRO O REHAB. DEL INMOVILIZADO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68921",
+      "descripcion": "68921 - PROVIS. POR DESMANT., RETIRO O REHAB. DEL INMOV. - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6892101",
+      "descripcion": "6892101 - PROVIS. POR DESMANT., RETIRO O REHAB. DEL INMOV. - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68922",
+      "descripcion": "68922 - PROVIS. POR DESMANT., RETIRO O REHAB. DEL INMOV.-ACTUAL. FINANC."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6892201",
+      "descripcion": "6892201 - PROVIS. POR DESMANT., RETIRO O REHAB. DEL INMOV.-ACTUAL. FINANC."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6893",
+      "descripcion": "6893 - PROVISION PARA REESTRUCTURACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6893001",
+      "descripcion": "6893001 - PROVISION PARA REESTRUCTURACIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6894",
+      "descripcion": "6894 - PROVIS. PARA PROTECCION Y REMEDIACION DEL MEDIO AMBIENTE"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68941",
+      "descripcion": "68941 - PROVIS. PARA PROTEC. Y REMED. DEL MEDIO AMBIENTE - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6894101",
+      "descripcion": "6894101 - PROVIS. PARA PROTEC. Y REMED. DEL MEDIO AMBIENTE - COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68942",
+      "descripcion": "68942 - PROVIS. PARA PROTEC. Y REMED. DEL MEDIO AMBIENTE - ACTUAL. FINANC."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6894201",
+      "descripcion": "6894201 - PROVIS. PARA PROTEC. Y REMED. DEL MEDIO AMBIENTE - ACTUAL. FINANC."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6896",
+      "descripcion": "6896 - PROVISION PARA GARANTIAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68961",
+      "descripcion": "68961 - PROVISION PARA GARANTIAS – COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6896101",
+      "descripcion": "6896101 - PROVISION PARA GARANTIAS – COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68962",
+      "descripcion": "68962 - PROVISION PARA GARANTIAS – ACTUALIZACION FINANCIERA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6896201",
+      "descripcion": "6896201 - PROVISION PARA GARANTIAS – ACTUALIZACION FINANCIERA"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6897",
+      "descripcion": "6897 - PROVISION POR ACTIVOS POR DERECHO DE USO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68971",
+      "descripcion": "68971 - PROVISION POR ACTIVOS POR DERECHO DE USO ARRENDAMIENTO OPERATIVO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6897101",
+      "descripcion": "6897101 - PROVISION POR ACTIVOS POR DERECHO DE USO ARRENDAMIENTO OPERATIVO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "68972",
+      "descripcion": "68972 - PROVIS. POR ACTV. POR DERECHO DE USO ARREND. OPERT.-ACTUAL. FINANC."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6897201",
+      "descripcion": "6897201 - PROVIS. POR ACTV. POR DERECHO DE USO ARREND. OPERT.-ACTUAL. FINANC."
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6899",
+      "descripcion": "6899 - OTRAS PROVISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6899001",
+      "descripcion": "6899001 - OTRAS PROVISIONES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6911",
+      "descripcion": "6911 - MERCADERIAS - EXPORTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69111",
+      "descripcion": "69111 - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6911101",
+      "descripcion": "6911101 - COSTO DE VTA. - MERCADERIAS - EXPORTACION - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69112",
+      "descripcion": "69112 - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6911201",
+      "descripcion": "6911201 - COSTO DE VTA. - MERCADERIAS - EXPORTACION - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6912",
+      "descripcion": "6912 - MERCADERIAS - VENTA LOCAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69121",
+      "descripcion": "69121 - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6912101",
+      "descripcion": "6912101 - COSTO DE VTA. - MERCADERIAS - VENTA LOCAL - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69122",
+      "descripcion": "69122 - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6912201",
+      "descripcion": "6912201 - COSTO DE VTA. - MERCADERIAS - VENTA LOCAL - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6921",
+      "descripcion": "6921 - PRODUCTOS TERMINADOS - EXPORTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69211",
+      "descripcion": "69211 - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6921101",
+      "descripcion": "6921101 - COSTO DE VTA. - PRODUCTOS TERMINADOS - EXPORTACION - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69212",
+      "descripcion": "69212 - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6921201",
+      "descripcion": "6921201 - COSTO DE VTA. - PRODUCTOS TERMINADOS - EXPORTACION - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6922",
+      "descripcion": "6922 - PRODUCTOS TERMINADOS - VENTA LOCAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69221",
+      "descripcion": "69221 - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6922101",
+      "descripcion": "6922101 - COSTO DE VTA. - PRODUCTOS TERMINADOS - VENTA LOCAL - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69222",
+      "descripcion": "69222 - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6922201",
+      "descripcion": "6922201 - COSTO DE VTA. - PRODUCTOS TERMINADOS - VENTA LOCAL - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6923",
+      "descripcion": "6923 - COSTOS DE FINANCIACION – PRODUCTOS TERMINADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69231",
+      "descripcion": "69231 - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6923101",
+      "descripcion": "6923101 - COSTO DE VTA. - COSTO DE FINANC. - PROD. TERMINADOS - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69232",
+      "descripcion": "69232 - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6923201",
+      "descripcion": "6923201 - COSTO DE VTA. - COSTO DE FINANC. - PROD. TERMINADOS - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6924",
+      "descripcion": "6924 - COSTOS DE PRODUCCION NO ABSORBIDO – PRODUCTOS TERMINADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6924001",
+      "descripcion": "6924001 - COSTO DE VTA. - COSTOS DE PROD. NO ABSORBIDOS - PROD. TERMINADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6925",
+      "descripcion": "6925 - COSTO DE INEFICIENCIA – PRODUCTOS TERMINADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6925001",
+      "descripcion": "6925001 - COSTO DE VTA. - COSTO DE INEFICIENCIA - PRODUCTOS TERMINADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6931",
+      "descripcion": "6931 - SERVICIOS – EXPORTACION"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69311",
+      "descripcion": "69311 - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6931101",
+      "descripcion": "6931101 - COSTO DE VTA. - SERVICIOS – EXPORTACION - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69312",
+      "descripcion": "69312 - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6931201",
+      "descripcion": "6931201 - COSTO DE VTA. - SERVICIOS – EXPORTACION - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6932",
+      "descripcion": "6932 - SERVICIOS – LOCAL"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69321",
+      "descripcion": "69321 - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6932101",
+      "descripcion": "6932101 - COSTO DE VTA. - SERVICIOS – LOCAL - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69322",
+      "descripcion": "69322 - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6932201",
+      "descripcion": "6932201 - COSTO DE VTA. - SERVICIOS – LOCAL - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6941",
+      "descripcion": "6941 - SUBPRODUCTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69411",
+      "descripcion": "69411 - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6941101",
+      "descripcion": "6941101 - COSTO DE VTA. - SUBPRODUCTOS - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69412",
+      "descripcion": "69412 - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6941201",
+      "descripcion": "6941201 - COSTO DE VTA. - SUBPRODUCTOS - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6942",
+      "descripcion": "6942 - DESECHOS Y DESPERDICIOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69421",
+      "descripcion": "69421 - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6942101",
+      "descripcion": "6942101 - COSTO DE VTA. - DESECHOS Y DESPERDICIOS - TERCEROS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "69422",
+      "descripcion": "69422 - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6942201",
+      "descripcion": "6942201 - COSTO DE VTA. - DESECHOS Y DESPERDICIOS - RELACIONADAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6951",
+      "descripcion": "6951 - MERCADERIAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6951001",
+      "descripcion": "6951001 - GAST. POR DESVAL. DE MERCADERIAS AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6952",
+      "descripcion": "6952 - PRODUCTOS TERMINADOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6952001",
+      "descripcion": "6952001 - GAST. POR DESVAL. DE PROD. TERMINADOS AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6953",
+      "descripcion": "6953 - SUBPRODUCTOS, DESECHOS Y DESPERDICIOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6953001",
+      "descripcion": "6953001 - GAST. POR DESVAL. DE SUBPRODUCTOS AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6953002",
+      "descripcion": "6953002 - GAST. POR DESVAL. DE DESCH. Y DESP. AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6954",
+      "descripcion": "6954 - PRODUCTOS EN PROCESO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6954001",
+      "descripcion": "6954001 - GAST. POR DESVAL. DE PROD. EN PROCESO AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6955",
+      "descripcion": "6955 - MATERIAS PRIMAS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6955001",
+      "descripcion": "6955001 - GAST. POR DESVAL. DE MATERIAS PRIMAS AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6956",
+      "descripcion": "6956 - MATERIALES AUXILIARES, SUMINISTROS Y REPUESTOS"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6956001",
+      "descripcion": "6956001 - GAST. POR DESVAL. DE MATERIALES AUXILIARES AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6956002",
+      "descripcion": "6956002 - GAST. POR DESVAL. DE SUMINISTROS Y REPUESTOS AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6957",
+      "descripcion": "6957 - ENVASES Y EMBALAJES"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6957001",
+      "descripcion": "6957001 - GAST. POR DESVAL. DE ENVASES AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6957002",
+      "descripcion": "6957002 - GAST. POR DESVAL. DE EMBALAJES AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6958",
+      "descripcion": "6958 - INVENTARIOS POR RECIBIR"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6958001",
+      "descripcion": "6958001 - GAST. POR DESVAL. DE MERCADERIA POR RECIBIR AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6958002",
+      "descripcion": "6958002 - GAST. POR DESVAL. DE MATERIA PRIMA POR RECIBIR AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6958003",
+      "descripcion": "6958003 - GAST. POR DESVAL. DE MAT. AUXILIARES POR RECIBIR AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6958004",
+      "descripcion": "6958004 - GAST. POR DESVAL. DE SUMINISTROS Y REPUESTOS POR RECIBIR AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6958005",
+      "descripcion": "6958005 - GAST. POR DESVAL. DE ENVASES POR RECIBIR AL COSTO"
+    }
+  },
+  {
+    "model": "api.cuentacompra",
+    "fields": {
+      "codigo": "6958006",
+      "descripcion": "6958006 - GAST. POR DESVAL. DE EMBALAJES POR RECIBIR AL COSTO"
+    }
+  }
+]

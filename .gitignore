@@ -1,76 +1,33 @@
-# ==========================================
-# SEGURIDAD: Credenciales y Tokens de API
-# ==========================================
-api_token.txt
-api_token2.txt
-.env
-.env.*
+﻿# Node/React
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
 
-# ==========================================
-# DATOS PRIVADOS: Clientes y Proveedores
-# ==========================================
-empresas.json
-ctacom.json
-autosave_sesion.json
-autosave_session.json
-config_sire.json
-cache_deudas.json
-datos/*
-!datos/.gitkeep
-
-# ==========================================
-# Python Cache & Entornos Virtuales
-# ==========================================
+# Python/Django
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
-.pytest_cache/
-.coverage
-htmlcov/
-.venv/
+*.class
 venv/
-ENV/
 env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+.venv/
 
-# ==========================================
-# CI/CD y Despliegue Simulado
-# ==========================================
-staging/
-deployment_info.txt
+# Entorno y Secretos
+.env
+.env.local
 
-# ==========================================
-# Archivos Temporales, Logs y Ofimática
-# ==========================================
-*.log
-*.tmp
-*.bak
-*.swp
-*.csv
-*.xlsx
-*.XLS
-*.xls
-*.pdf
-*.xml
+# Bases de datos y Media
+db.sqlite3
+media/
+uploads/
+comprobantes/
+exports/
+
+# OS / Herramientas
 .DS_Store
 Thumbs.db
-desktop.ini
-scratch/
+.vscode/
+.idea/
+
+# Archivos temporales de scripts (nuestros fix temporales)
+fix_*.py

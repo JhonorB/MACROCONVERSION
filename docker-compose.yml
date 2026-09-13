@@ -1,0 +1,65 @@
+
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: sire_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sire_user -d conversor_sire"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - sire_network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: sire_backend
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - media_data:/app/media
+    command: >
+      sh -c "python manage.py makemigrations api &&
+             python manage.py migrate &&
+             python manage.py loaddata cuentas_compras || true &&
+             python manage.py shell -c \"from django.contrib.auth.models import User; User.objects.filter(username='admin').exists() or User.objects.create_superuser('admin', 'admin@sire.local', 'admin123'); from api.models import PerfilUsuario; p, _ = PerfilUsuario.objects.get_or_create(usuario=User.objects.get(username='admin')); p.rol='ADMIN'; p.estado='ACTIVO'; p.save()\" &&
+             gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 3 --timeout 300"
+    networks:
+      - sire_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: /api
+    container_name: sire_frontend
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"
+    networks:
+      - sire_network
+
+volumes:
+  postgres_data:
+  media_data:
+
+networks:
+  sire_network:
+    driver: bridge
