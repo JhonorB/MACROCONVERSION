@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/layout/Header';
 import Dashboard from '../components/dashboard/Dashboard';
 import { useProcesador } from '../hooks/useProcesador';
 

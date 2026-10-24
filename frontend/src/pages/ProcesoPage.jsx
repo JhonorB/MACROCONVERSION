@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Header from '../components/layout/Header';
 import { useProcesador } from '../hooks/useProcesador';
 import DetraccionesModal from '../components/detracciones/DetraccionesModal';
 import AsignadorCuentas from '../components/cuentas/AsignadorCuentas';
@@ -35,8 +34,6 @@ const ProcesoPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-sire-dark">
-      <Header />
-      
       {loading && (
         <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center">
           <div className="w-16 h-16 border-4 border-sire-secondary border-t-sire-blue rounded-full animate-spin"></div>
