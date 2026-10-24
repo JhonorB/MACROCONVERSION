@@ -10,16 +10,15 @@ const ProcesoPage = () => {
   const { sesionId } = useParams();
   const navigate = useNavigate();
   const { 
-    estado, loading, detracciones, facturas, resumen,
-    startProceso, confirmarDetracciones, asignarCuenta, generarFinal, descargar, resetProceso
-  } = useProcesador();
+    estado, loading, error, detracciones, facturas, resumen, periodo,
+    cargarSesion, confirmarDetracciones, asignarCuenta, generarFinal, descargar, resetProceso
+  } = useProcesador(sesionId);
 
-  // Mock initial load for demo
   useEffect(() => {
-    if (estado === 'UPLOAD') {
-      startProceso({ tipo: 'COM' });
+    if (sesionId) {
+      cargarSesion(sesionId);
     }
-  }, []);
+  }, [sesionId, cargarSesion]);
 
   const handleNewProcess = () => {
     resetProceso();
@@ -29,9 +28,9 @@ const ProcesoPage = () => {
   const counters = {
     total: facturas.length,
     assigned: facturas.filter(f => f.cuenta_asignada).length,
-    facturas: facturas.filter(f => f.serie.startsWith('F')).length,
-    boletas: facturas.filter(f => f.serie.startsWith('B')).length,
-    ncnd: facturas.filter(f => f.serie.startsWith('N')).length,
+    facturas: facturas.filter(f => (f.serie || '').startsWith('F')).length,
+    boletas: facturas.filter(f => (f.serie || '').startsWith('B')).length,
+    ncnd: facturas.filter(f => (f.serie || '').startsWith('N')).length,
   };
 
   return (
@@ -39,9 +38,24 @@ const ProcesoPage = () => {
       <Header />
       
       {loading && (
-        <div className="absolute inset-0 z-[100] bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center">
+        <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center">
           <div className="w-16 h-16 border-4 border-sire-secondary border-t-sire-blue rounded-full animate-spin"></div>
-          <p className="mt-4 text-white font-medium text-lg">Procesando información...</p>
+          <p className="mt-4 text-white font-medium text-lg">Procesando información del servidor...</p>
+        </div>
+      )}
+
+      {error && !loading && estado === 'UPLOAD' && (
+        <div className="flex-1 flex items-center justify-center p-6">
+          <div className="max-w-md w-full bg-sire-card p-6 rounded-2xl border border-sire-red/50 text-center shadow-2xl">
+            <h3 className="text-xl font-bold text-sire-red mb-2">Error en la sesión</h3>
+            <p className="text-gray-300 text-sm mb-6">{error}</p>
+            <button
+              onClick={handleNewProcess}
+              className="px-6 py-3 bg-sire-blue hover:bg-blue-600 text-white rounded-xl font-medium transition shadow-lg"
+            >
+              Volver al Dashboard
+            </button>
+          </div>
         </div>
       )}
 
@@ -57,6 +71,7 @@ const ProcesoPage = () => {
           <AsignadorCuentas 
             facturas={facturas}
             counters={counters}
+            periodo={periodo}
             onAssign={asignarCuenta}
             onGenerate={generarFinal}
           />

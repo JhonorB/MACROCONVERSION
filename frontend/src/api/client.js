@@ -26,6 +26,7 @@ export const getCuentas = (query = '') => client.get(`/cuentas/${query ? `?q=${q
 export const getCuentasSugeridas = (ruc) => client.get(`/cuentas/sugeridas/${ruc}/`);
 
 // Proceso
+export const getSesion = (sesionId) => client.get(`/procesos/${sesionId}/`);
 export const uploadCsv = (formData) => client.post('/procesos/upload_csv/', formData, { headers: { 'Content-Type': 'multipart/form-data' } });
 export const getDetracciones = (sesionId) => client.get(`/procesos/${sesionId}/detracciones/`);
 export const confirmarDetracciones = (sesionId, excluidos) => client.post(`/procesos/${sesionId}/detracciones/`, { excluidos });

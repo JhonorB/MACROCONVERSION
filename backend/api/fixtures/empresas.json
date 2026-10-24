@@ -1,0 +1,1289 @@
+[
+{
+  "model": "api.empresa",
+  "pk": 1,
+  "fields": {
+    "usuario": 3,
+    "codigo": "0001",
+    "ruc": "20600710398",
+    "razon_social": "DEMO SAC",
+    "created_at": "2026-09-11T18:15:42.941Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 2,
+  "fields": {
+    "usuario": 4,
+    "codigo": "0002",
+    "ruc": "20552990308",
+    "razon_social": "ESTUDIO CONTABLE PONCE",
+    "created_at": "2026-09-11T18:15:42.951Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 3,
+  "fields": {
+    "usuario": 5,
+    "codigo": "0003",
+    "ruc": "10463247272",
+    "razon_social": "JEP MEDICAL E.I.R.L.",
+    "created_at": "2026-09-11T18:15:42.952Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 5,
+  "fields": {
+    "usuario": 6,
+    "codigo": "0005",
+    "ruc": "10483875105",
+    "razon_social": "ANDEAN ASPHALT E.I.R.L.",
+    "created_at": "2026-09-11T18:15:42.957Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 16,
+  "fields": {
+    "usuario": 7,
+    "codigo": "0016",
+    "ruc": "20614834880",
+    "razon_social": "ESCALANTE BUEN DIA PASCUA",
+    "created_at": "2026-09-11T18:15:42.977Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 17,
+  "fields": {
+    "usuario": 8,
+    "codigo": "0017",
+    "ruc": "20601286271",
+    "razon_social": "CORILLA ILIZARBE LUIS ANGEL",
+    "created_at": "2026-09-11T18:15:42.979Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 19,
+  "fields": {
+    "usuario": 9,
+    "codigo": "0019",
+    "ruc": "20611838621",
+    "razon_social": "LLACZA SOTO ELIZABETH NORMA",
+    "created_at": "2026-09-11T18:15:42.982Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 25,
+  "fields": {
+    "usuario": 10,
+    "codigo": "0025",
+    "ruc": "20608262246",
+    "razon_social": "TRANSPORT LINCOL SAC",
+    "created_at": "2026-09-11T18:15:42.992Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 34,
+  "fields": {
+    "usuario": 11,
+    "codigo": "0034",
+    "ruc": "10473075526",
+    "razon_social": "SORIANO ALVARADO ARTURO",
+    "created_at": "2026-09-11T18:15:43.008Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 37,
+  "fields": {
+    "usuario": 12,
+    "codigo": "0037",
+    "ruc": "20612870196",
+    "razon_social": "EMPRESA PUBLICIDAD Y EDITOR",
+    "created_at": "2026-09-11T18:15:43.013Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 40,
+  "fields": {
+    "usuario": 3,
+    "codigo": "0040",
+    "ruc": "20523471067",
+    "razon_social": "LEON SEDA├æO JORGE HUMBERTO",
+    "created_at": "2026-09-11T18:15:43.018Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 42,
+  "fields": {
+    "usuario": 4,
+    "codigo": "0042",
+    "ruc": "10407440582",
+    "razon_social": "MARCAS YAULLIHUA SIXTO",
+    "created_at": "2026-09-11T18:15:43.021Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 48,
+  "fields": {
+    "usuario": 5,
+    "codigo": "0048",
+    "ruc": "20610829962",
+    "razon_social": "ITEREL GALARZA GIOVANA JANETH",
+    "created_at": "2026-09-11T18:15:43.030Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 51,
+  "fields": {
+    "usuario": 6,
+    "codigo": "0063",
+    "ruc": "00000000000",
+    "razon_social": "MALLQUI ALVA ZENON",
+    "created_at": "2026-09-11T18:36:25.625Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 52,
+  "fields": {
+    "usuario": 7,
+    "codigo": "0068",
+    "ruc": "10095481456",
+    "razon_social": "MONTES AGUILAR HUGO JAIME",
+    "created_at": "2026-09-11T18:36:25.632Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 53,
+  "fields": {
+    "usuario": 8,
+    "codigo": "0074",
+    "ruc": "20523471067",
+    "razon_social": "MULTISERVICIOS JORCA EIRL",
+    "created_at": "2026-09-11T18:36:25.633Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 54,
+  "fields": {
+    "usuario": 9,
+    "codigo": "0077",
+    "ruc": "00000000000",
+    "razon_social": "MAXIMILIANO VELASQUEZ OSCAR FLORENCIO",
+    "created_at": "2026-09-11T18:36:25.634Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 55,
+  "fields": {
+    "usuario": 10,
+    "codigo": "0081",
+    "ruc": "20543448568",
+    "razon_social": "DISTRIBUIDORA AVICOLA ELENA E.I.R.L.",
+    "created_at": "2026-09-11T18:36:25.636Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 56,
+  "fields": {
+    "usuario": 11,
+    "codigo": "0083",
+    "ruc": "20552990308",
+    "razon_social": "ARTESANIA Y DISE├æO RCA E.I.R.L.",
+    "created_at": "2026-09-11T18:36:25.637Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 57,
+  "fields": {
+    "usuario": 12,
+    "codigo": "0085",
+    "ruc": "20451634748",
+    "razon_social": "CONSORCIO Y SOLUCIONES",
+    "created_at": "2026-09-11T18:36:25.638Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 58,
+  "fields": {
+    "usuario": 3,
+    "codigo": "0089",
+    "ruc": "00000000000",
+    "razon_social": "EARTEC E.I.R.L.",
+    "created_at": "2026-09-11T18:36:25.639Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 59,
+  "fields": {
+    "usuario": 4,
+    "codigo": "0094",
+    "ruc": "00000000000",
+    "razon_social": "TRANSPORTE SERVICIO DE GRUA Y CARGA SORJAPE S.A.C.",
+    "created_at": "2026-09-11T18:36:25.640Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 60,
+  "fields": {
+    "usuario": 5,
+    "codigo": "0097",
+    "ruc": "00000000000",
+    "razon_social": "JORGE ROJAS DORIS MARIA",
+    "created_at": "2026-09-11T18:36:25.642Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 61,
+  "fields": {
+    "usuario": 6,
+    "codigo": "0101",
+    "ruc": "10403021666",
+    "razon_social": "HURTADO FLORES EDWIN JULIAN",
+    "created_at": "2026-09-11T18:36:25.642Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 62,
+  "fields": {
+    "usuario": 7,
+    "codigo": "0105",
+    "ruc": "00000000000",
+    "razon_social": "MARSEGUR SAC",
+    "created_at": "2026-09-11T18:36:25.644Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 63,
+  "fields": {
+    "usuario": 8,
+    "codigo": "0107",
+    "ruc": "00000000000",
+    "razon_social": "CORPORACION ARQUITECTONICOS SAC",
+    "created_at": "2026-09-11T18:36:25.645Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 64,
+  "fields": {
+    "usuario": 9,
+    "codigo": "0108",
+    "ruc": "00000000000",
+    "razon_social": "MELCHOR LLATA GALINDO",
+    "created_at": "2026-09-11T18:36:25.646Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 65,
+  "fields": {
+    "usuario": 10,
+    "codigo": "0109",
+    "ruc": "00000000000",
+    "razon_social": "VIRGEN SANTA MARIA DE GUADALUPE COMERCIALIZ. EIRL",
+    "created_at": "2026-09-11T18:36:25.647Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 66,
+  "fields": {
+    "usuario": 11,
+    "codigo": "0200",
+    "ruc": "00000000000",
+    "razon_social": "CORILLA PEREZ RUTH GABRIELA",
+    "created_at": "2026-09-11T18:36:25.648Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 67,
+  "fields": {
+    "usuario": 12,
+    "codigo": "0203",
+    "ruc": "00000000000",
+    "razon_social": "COLCHONES TRIPLE S S.A.C.",
+    "created_at": "2026-09-11T18:36:25.649Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 68,
+  "fields": {
+    "usuario": 3,
+    "codigo": "0204",
+    "ruc": "00000000000",
+    "razon_social": "ATACHAGUA SALAZAR ELEUTERIO",
+    "created_at": "2026-09-11T18:36:25.650Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 69,
+  "fields": {
+    "usuario": 4,
+    "codigo": "0209",
+    "ruc": "00000000000",
+    "razon_social": "SEGENA SRL",
+    "created_at": "2026-09-11T18:36:25.651Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 70,
+  "fields": {
+    "usuario": 5,
+    "codigo": "0213",
+    "ruc": "00000000000",
+    "razon_social": "SALCEDO AVILA MARCO ANTONIO",
+    "created_at": "2026-09-11T18:36:25.652Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 71,
+  "fields": {
+    "usuario": 6,
+    "codigo": "0215",
+    "ruc": "20520775839",
+    "razon_social": "J-SIMEC SAC",
+    "created_at": "2026-09-11T18:36:25.653Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 72,
+  "fields": {
+    "usuario": 7,
+    "codigo": "0219",
+    "ruc": "00000000000",
+    "razon_social": "SLATHERY YEF S.A.C.",
+    "created_at": "2026-09-11T18:36:25.654Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 73,
+  "fields": {
+    "usuario": 8,
+    "codigo": "0221",
+    "ruc": "10101767766",
+    "razon_social": "CHACON ANGULO CESAR",
+    "created_at": "2026-09-11T18:36:25.655Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 74,
+  "fields": {
+    "usuario": 9,
+    "codigo": "0222",
+    "ruc": "00000000000",
+    "razon_social": "JULCAMANYAHUAMANI SANTA ISABEL",
+    "created_at": "2026-09-11T18:36:25.656Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 75,
+  "fields": {
+    "usuario": 10,
+    "codigo": "0224",
+    "ruc": "00000000000",
+    "razon_social": "VELASQUEZ BASILIO WALTER HECTOR",
+    "created_at": "2026-09-11T18:36:25.657Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 76,
+  "fields": {
+    "usuario": 11,
+    "codigo": "0225",
+    "ruc": "00000000000",
+    "razon_social": "AMARINGO OJANAMA MIRNA ISABEL",
+    "created_at": "2026-09-11T18:36:25.658Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 77,
+  "fields": {
+    "usuario": 12,
+    "codigo": "0230",
+    "ruc": "20603283288",
+    "razon_social": "TITICACA YACHT ADVENTURES S.R.L.",
+    "created_at": "2026-09-11T18:36:25.659Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 78,
+  "fields": {
+    "usuario": 3,
+    "codigo": "0231",
+    "ruc": "00000000000",
+    "razon_social": "OMV CORPORATION ENGINEERS PERU S.A.C.",
+    "created_at": "2026-09-11T18:36:25.660Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 79,
+  "fields": {
+    "usuario": 4,
+    "codigo": "0234",
+    "ruc": "00000000000",
+    "razon_social": "LUMAR INGENIERIA Y SOLUCIONES ELECTRONICAS SAC",
+    "created_at": "2026-09-11T18:36:25.662Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 80,
+  "fields": {
+    "usuario": 5,
+    "codigo": "0235",
+    "ruc": "00000000000",
+    "razon_social": "MICRO-ATALMO S.A.C.",
+    "created_at": "2026-09-11T18:36:25.666Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 81,
+  "fields": {
+    "usuario": 6,
+    "codigo": "0237",
+    "ruc": "20601345391",
+    "razon_social": "VETGARDEN SAC",
+    "created_at": "2026-09-11T18:36:25.667Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 82,
+  "fields": {
+    "usuario": 7,
+    "codigo": "0238",
+    "ruc": "00000000000",
+    "razon_social": "SORJANO PEREZ YESSICA ISABEL",
+    "created_at": "2026-09-11T18:36:25.668Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 83,
+  "fields": {
+    "usuario": 8,
+    "codigo": "0240",
+    "ruc": "00000000000",
+    "razon_social": "ACADEMIA DE COSTURA EIRL",
+    "created_at": "2026-09-11T18:36:25.669Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 84,
+  "fields": {
+    "usuario": 9,
+    "codigo": "0241",
+    "ruc": "10104879981",
+    "razon_social": "TAPE LAURA ELIZABETH",
+    "created_at": "2026-09-11T18:36:25.671Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 85,
+  "fields": {
+    "usuario": 10,
+    "codigo": "0242",
+    "ruc": "20478066580",
+    "razon_social": "MERCOWORLD S.A.C.",
+    "created_at": "2026-09-11T18:36:25.672Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 86,
+  "fields": {
+    "usuario": 11,
+    "codigo": "0245",
+    "ruc": "10040405301",
+    "razon_social": "CABELLO ROSAS MANUEL FELIX",
+    "created_at": "2026-09-11T18:36:25.673Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 87,
+  "fields": {
+    "usuario": 12,
+    "codigo": "0246",
+    "ruc": "00000000000",
+    "razon_social": "MAMANI RODRIGUEZ ALIPIO RICHARD",
+    "created_at": "2026-09-11T18:36:25.674Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 88,
+  "fields": {
+    "usuario": 3,
+    "codigo": "0247",
+    "ruc": "00000000000",
+    "razon_social": "SERVICIOS CORILLA",
+    "created_at": "2026-09-11T18:36:25.675Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 89,
+  "fields": {
+    "usuario": 4,
+    "codigo": "0250",
+    "ruc": "00000000000",
+    "razon_social": "SALGUERON VIRTO MARLENE",
+    "created_at": "2026-09-11T18:36:25.677Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 90,
+  "fields": {
+    "usuario": 5,
+    "codigo": "0251",
+    "ruc": "00000000000",
+    "razon_social": "KELLER GOMEZ FRANCO ALBERTO",
+    "created_at": "2026-09-11T18:36:25.678Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 91,
+  "fields": {
+    "usuario": 6,
+    "codigo": "0253",
+    "ruc": "00000000000",
+    "razon_social": "INVERSIONES HEGOR SAC",
+    "created_at": "2026-09-11T18:36:25.680Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 92,
+  "fields": {
+    "usuario": 7,
+    "codigo": "0254",
+    "ruc": "20603577711",
+    "razon_social": "MOLIGRAN HURTADO E.I.R.L.",
+    "created_at": "2026-09-11T18:36:25.681Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 93,
+  "fields": {
+    "usuario": 8,
+    "codigo": "0255",
+    "ruc": "00000000000",
+    "razon_social": "LIPA QUISPE WILLIAN JORGE",
+    "created_at": "2026-09-11T18:36:25.682Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 94,
+  "fields": {
+    "usuario": 9,
+    "codigo": "0256",
+    "ruc": "00000000000",
+    "razon_social": "A Y M GRAF S.A.C.",
+    "created_at": "2026-09-11T18:36:25.683Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 95,
+  "fields": {
+    "usuario": 10,
+    "codigo": "0257",
+    "ruc": "00000000000",
+    "razon_social": "TAPE LAURA CHARLES",
+    "created_at": "2026-09-11T18:36:25.684Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 96,
+  "fields": {
+    "usuario": 11,
+    "codigo": "0259",
+    "ruc": "00000000000",
+    "razon_social": "MIJA PERALTA AGRIPINA",
+    "created_at": "2026-09-11T18:36:25.685Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 97,
+  "fields": {
+    "usuario": 12,
+    "codigo": "0260",
+    "ruc": "20604181985",
+    "razon_social": "CV PERFECTA EIRL",
+    "created_at": "2026-09-11T18:36:25.686Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 98,
+  "fields": {
+    "usuario": 3,
+    "codigo": "0261",
+    "ruc": "00000000000",
+    "razon_social": "INST. DE INNOVACION DEL EMPRENDEDOR",
+    "created_at": "2026-09-11T18:36:25.687Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 99,
+  "fields": {
+    "usuario": 4,
+    "codigo": "0262",
+    "ruc": "00000000000",
+    "razon_social": "SERVIGRUAS ABDIEL EIRL",
+    "created_at": "2026-09-11T18:36:25.689Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 100,
+  "fields": {
+    "usuario": 5,
+    "codigo": "0263",
+    "ruc": "00000000000",
+    "razon_social": "DISTRIBUIDORA DE ALIMENTOS AGROPECUARIOS BETTY SAC",
+    "created_at": "2026-09-11T18:36:25.690Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 101,
+  "fields": {
+    "usuario": 6,
+    "codigo": "0264",
+    "ruc": "10403162987",
+    "razon_social": "MALLQUI QUISPE LUCY AMPARO",
+    "created_at": "2026-09-11T18:36:25.691Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 102,
+  "fields": {
+    "usuario": 7,
+    "codigo": "0265",
+    "ruc": "00000000000",
+    "razon_social": "OFTALMORETINA S.A.C.",
+    "created_at": "2026-09-11T18:36:25.692Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 103,
+  "fields": {
+    "usuario": 8,
+    "codigo": "0266",
+    "ruc": "00000000000",
+    "razon_social": "CARHUARICA FALCON RONALD",
+    "created_at": "2026-09-11T18:36:25.693Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 104,
+  "fields": {
+    "usuario": 9,
+    "codigo": "0267",
+    "ruc": "00000000000",
+    "razon_social": "YUSSAC IMPORT S.A.C.",
+    "created_at": "2026-09-11T18:36:25.694Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 105,
+  "fields": {
+    "usuario": 10,
+    "codigo": "0268",
+    "ruc": "00000000000",
+    "razon_social": "PERU LOGISTICA ANDRES EDUARDO S.R.L.",
+    "created_at": "2026-09-11T18:36:25.695Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 106,
+  "fields": {
+    "usuario": 11,
+    "codigo": "0270",
+    "ruc": "00000000000",
+    "razon_social": "BRE├æA LANDA BEATRIZ MARCELINA",
+    "created_at": "2026-09-11T18:36:25.697Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 107,
+  "fields": {
+    "usuario": 12,
+    "codigo": "0271",
+    "ruc": "00000000000",
+    "razon_social": "JUANA YANET PONCE HUANCA",
+    "created_at": "2026-09-11T18:36:25.698Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 108,
+  "fields": {
+    "usuario": 3,
+    "codigo": "0272",
+    "ruc": "00000000000",
+    "razon_social": "ESPINOZA ARRIETA EDUARDO ABEL",
+    "created_at": "2026-09-11T18:36:25.700Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 109,
+  "fields": {
+    "usuario": 4,
+    "codigo": "0273",
+    "ruc": "20605582673",
+    "razon_social": "INDUSTRIAS JOM S.A.C.",
+    "created_at": "2026-09-11T18:36:25.701Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 110,
+  "fields": {
+    "usuario": 5,
+    "codigo": "0274",
+    "ruc": "00000000000",
+    "razon_social": "INVERSIONES CARMAR PERU E.I.R.L.",
+    "created_at": "2026-09-11T18:36:25.702Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 111,
+  "fields": {
+    "usuario": 6,
+    "codigo": "0275",
+    "ruc": "10428503495",
+    "razon_social": "GINO WILFREDO CHAVEZ MEDRANO",
+    "created_at": "2026-09-11T18:36:25.703Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 112,
+  "fields": {
+    "usuario": 7,
+    "codigo": "0276",
+    "ruc": "00000000000",
+    "razon_social": "J Y G BARMIN S.A.C.",
+    "created_at": "2026-09-11T18:36:25.705Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 113,
+  "fields": {
+    "usuario": 8,
+    "codigo": "0277",
+    "ruc": "00000000000",
+    "razon_social": "QUISPERU SAC",
+    "created_at": "2026-09-11T18:36:25.706Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 114,
+  "fields": {
+    "usuario": 9,
+    "codigo": "0278",
+    "ruc": "00000000000",
+    "razon_social": "D'CHRISTEN ACCESORIOS E.I.R.L.",
+    "created_at": "2026-09-11T18:36:25.708Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 115,
+  "fields": {
+    "usuario": 10,
+    "codigo": "0279",
+    "ruc": "10065648763",
+    "razon_social": "ORE TORRES HECTOR ARMANDO",
+    "created_at": "2026-09-11T18:36:25.709Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 116,
+  "fields": {
+    "usuario": 11,
+    "codigo": "0280",
+    "ruc": "00000000000",
+    "razon_social": "CONSTRUCTORA & AGENTES INMOBILIARIOS WASI MUSUQ",
+    "created_at": "2026-09-11T18:36:25.710Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 117,
+  "fields": {
+    "usuario": 12,
+    "codigo": "0281",
+    "ruc": "00000000000",
+    "razon_social": "HERMELINDA ZORRILLA PONCE MIJA",
+    "created_at": "2026-09-11T18:36:25.711Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 118,
+  "fields": {
+    "usuario": 3,
+    "codigo": "0282",
+    "ruc": "00000000000",
+    "razon_social": "SERVYEP INGENIERIA & MAQUINARIAS E.I.R.L.",
+    "created_at": "2026-09-11T18:36:25.712Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 119,
+  "fields": {
+    "usuario": 4,
+    "codigo": "0283",
+    "ruc": "20607696595",
+    "razon_social": "INMOBILIARIA TU-KSA",
+    "created_at": "2026-09-11T18:36:25.713Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 120,
+  "fields": {
+    "usuario": 5,
+    "codigo": "0284",
+    "ruc": "00000000000",
+    "razon_social": "INSTITUTO MODA & BELLEZA ESTILO SAC",
+    "created_at": "2026-09-11T18:36:25.714Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 121,
+  "fields": {
+    "usuario": 6,
+    "codigo": "0285",
+    "ruc": "00000000000",
+    "razon_social": "CREATIVA DBC SAC",
+    "created_at": "2026-09-11T18:36:25.715Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 122,
+  "fields": {
+    "usuario": 7,
+    "codigo": "0286",
+    "ruc": "00000000000",
+    "razon_social": "KALO SERVICIOS SAC",
+    "created_at": "2026-09-11T18:36:25.716Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 123,
+  "fields": {
+    "usuario": 8,
+    "codigo": "0287",
+    "ruc": "00000000000",
+    "razon_social": "VELAYARCE FERNANDEZ JOSELIN MISHELL",
+    "created_at": "2026-09-11T18:36:25.718Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 124,
+  "fields": {
+    "usuario": 9,
+    "codigo": "0288",
+    "ruc": "00000000000",
+    "razon_social": "SERVINDUSTRIAS V Y E PERUANA E.I.R.L.",
+    "created_at": "2026-09-11T18:36:25.719Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 125,
+  "fields": {
+    "usuario": 10,
+    "codigo": "0299",
+    "ruc": "00000000000",
+    "razon_social": "ATAYPOMA TAIPE JOSE LUIS",
+    "created_at": "2026-09-11T18:36:25.720Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 126,
+  "fields": {
+    "usuario": 11,
+    "codigo": "0300",
+    "ruc": "00000000000",
+    "razon_social": "FERNANDEZ SANTANA JHON JHAIR",
+    "created_at": "2026-09-11T18:36:25.721Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 127,
+  "fields": {
+    "usuario": 12,
+    "codigo": "0301",
+    "ruc": "10473075526",
+    "razon_social": "MAYTA VILLANUEVA MARLEN ZELMA",
+    "created_at": "2026-09-11T18:36:25.722Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 128,
+  "fields": {
+    "usuario": 3,
+    "codigo": "0302",
+    "ruc": "20552290403",
+    "razon_social": "SATELCAR PERU S.A.",
+    "created_at": "2026-09-11T18:36:25.723Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 129,
+  "fields": {
+    "usuario": 4,
+    "codigo": "0303",
+    "ruc": "20602627617",
+    "razon_social": "CLINICA TU SALUD DEL PERU S.A.",
+    "created_at": "2026-09-11T18:36:25.724Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 130,
+  "fields": {
+    "usuario": 5,
+    "codigo": "0304",
+    "ruc": "20606626470",
+    "razon_social": "CLINICA TU SALUD VES S.A.",
+    "created_at": "2026-09-11T18:36:25.725Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 131,
+  "fields": {
+    "usuario": 6,
+    "codigo": "0305",
+    "ruc": "00000000000",
+    "razon_social": "BLANCO VILCAPOMA DEYBI LUIS",
+    "created_at": "2026-09-11T18:36:25.726Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 132,
+  "fields": {
+    "usuario": 7,
+    "codigo": "0306",
+    "ruc": "20522023290",
+    "razon_social": "ECOAMB PERU S.A.C.",
+    "created_at": "2026-09-11T18:36:25.727Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 133,
+  "fields": {
+    "usuario": 8,
+    "codigo": "0307",
+    "ruc": "20535614114",
+    "razon_social": "INVERSIONES GENERALES TOLA Y KELA",
+    "created_at": "2026-09-11T18:36:25.728Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 134,
+  "fields": {
+    "usuario": 9,
+    "codigo": "0308",
+    "ruc": "20601286271",
+    "razon_social": "FREVA SAC",
+    "created_at": "2026-09-11T18:36:25.730Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 135,
+  "fields": {
+    "usuario": 10,
+    "codigo": "0309",
+    "ruc": "20610829962",
+    "razon_social": "EMPRESA DE TRANSPORTES JHODAR E.R.L.",
+    "created_at": "2026-09-11T18:36:25.731Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 136,
+  "fields": {
+    "usuario": 11,
+    "codigo": "0310",
+    "ruc": "00000000000",
+    "razon_social": "INMOBILIARIA EDEM PERU SAC",
+    "created_at": "2026-09-11T18:36:25.732Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 137,
+  "fields": {
+    "usuario": 12,
+    "codigo": "0311",
+    "ruc": "10407440582",
+    "razon_social": "PALACIN ATACHAGUA DANILO WILSON",
+    "created_at": "2026-09-11T18:36:25.733Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 138,
+  "fields": {
+    "usuario": 3,
+    "codigo": "0312",
+    "ruc": "20611838621",
+    "razon_social": "GRUPO PRODA HERMANOS S.A.C.",
+    "created_at": "2026-09-11T18:36:25.734Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 139,
+  "fields": {
+    "usuario": 4,
+    "codigo": "0313",
+    "ruc": "20610990623",
+    "razon_social": "COMPANY PALOMINO VIAL S.A.C.",
+    "created_at": "2026-09-11T18:36:25.735Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 140,
+  "fields": {
+    "usuario": 5,
+    "codigo": "0314",
+    "ruc": "00000000000",
+    "razon_social": "GRUPO DARMED S.A.C.",
+    "created_at": "2026-09-11T18:36:25.736Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 141,
+  "fields": {
+    "usuario": 6,
+    "codigo": "0315",
+    "ruc": "20426488257",
+    "razon_social": "ASOCIACION DE PROPIETARIOS DEL MERCADO MODELO N┬░1",
+    "created_at": "2026-09-11T18:36:25.738Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 142,
+  "fields": {
+    "usuario": 7,
+    "codigo": "0316",
+    "ruc": "00000000000",
+    "razon_social": "MILSUR JHV S.A.C.",
+    "created_at": "2026-09-11T18:36:25.741Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 143,
+  "fields": {
+    "usuario": 8,
+    "codigo": "0317",
+    "ruc": "00000000000",
+    "razon_social": "SIERRA PAUCAR CHRISTIAN RONALD",
+    "created_at": "2026-09-11T18:36:25.742Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 144,
+  "fields": {
+    "usuario": 9,
+    "codigo": "0318",
+    "ruc": "00000000000",
+    "razon_social": "JHIVE S.A.C.",
+    "created_at": "2026-09-11T18:36:25.744Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 145,
+  "fields": {
+    "usuario": 10,
+    "codigo": "0319",
+    "ruc": "00000000000",
+    "razon_social": "INVERSIONES FRESCOZZI S.A.C.",
+    "created_at": "2026-09-11T18:36:25.745Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 146,
+  "fields": {
+    "usuario": 11,
+    "codigo": "0320",
+    "ruc": "00000000000",
+    "razon_social": "IMAGINEN PERU S.A.C.",
+    "created_at": "2026-09-11T18:36:25.746Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 147,
+  "fields": {
+    "usuario": 12,
+    "codigo": "0321",
+    "ruc": "20514157953",
+    "razon_social": "LA CASA OXAPAMPINA A & K E.I.R.L.",
+    "created_at": "2026-09-11T18:36:25.747Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 148,
+  "fields": {
+    "usuario": 3,
+    "codigo": "0322",
+    "ruc": "00000000000",
+    "razon_social": "VELASQUEZ MAXIMILIANO",
+    "created_at": "2026-09-11T18:36:25.748Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 149,
+  "fields": {
+    "usuario": 4,
+    "codigo": "0323",
+    "ruc": "00000000000",
+    "razon_social": "SANCHEZ ONZUETA JANI MERCEDES",
+    "created_at": "2026-09-11T18:36:25.749Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 150,
+  "fields": {
+    "usuario": 5,
+    "codigo": "0324",
+    "ruc": "00000000000",
+    "razon_social": "INVERSIONES HUACHO ARIAS S.A.C.",
+    "created_at": "2026-09-11T18:36:25.750Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 151,
+  "fields": {
+    "usuario": 6,
+    "codigo": "0325",
+    "ruc": "00000000000",
+    "razon_social": "DISTRIBUIDORA GABYGOL E.I.R.L.",
+    "created_at": "2026-09-11T18:36:25.751Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 152,
+  "fields": {
+    "usuario": 7,
+    "codigo": "0326",
+    "ruc": "00000000000",
+    "razon_social": "GRUPO SANTA CRUZ S & J S.A.C.",
+    "created_at": "2026-09-11T18:36:25.752Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 153,
+  "fields": {
+    "usuario": 8,
+    "codigo": "0327",
+    "ruc": "00000000000",
+    "razon_social": "AVIZAL HURTADO EIRL",
+    "created_at": "2026-09-11T18:36:25.753Z"
+  }
+},
+{
+  "model": "api.empresa",
+  "pk": 154,
+  "fields": {
+    "usuario": 9,
+    "codigo": "0328",
+    "ruc": "00000000000",
+    "razon_social": "0328 - FLORES CONDOR",
+    "created_at": "2026-09-11T18:36:25.755Z"
+  }
+}
+]

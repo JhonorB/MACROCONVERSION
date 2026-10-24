@@ -1,5 +1,9 @@
 import os
 import fitz
+import logging
+import traceback
+
+logger = logging.getLogger(__name__)
 from rest_framework import viewsets, views, status, parsers
 from rest_framework.response import Response
 from rest_framework.decorators import action
@@ -88,7 +92,7 @@ class CuentaCompraViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class ProcesoViewSet(viewsets.ViewSet):
-    parser_classes = (parsers.MultiPartParser, parsers.FormParser)
+    parser_classes = (parsers.MultiPartParser, parsers.FormParser, parsers.JSONParser)
     permission_classes = [IsAuthenticated]
 
     def get_sesion(self, pk, user):
@@ -96,6 +100,12 @@ class ProcesoViewSet(viewsets.ViewSet):
         if hasattr(user, 'perfil') and user.perfil.rol == 'CONTADOR':
             qs = qs.filter(usuario=user)
         return qs.first()
+
+    def retrieve(self, request, pk=None):
+        sesion = self.get_sesion(pk, request.user)
+        if not sesion:
+            return Response({'error': 'Sesion no encontrada o acceso no autorizado'}, status=status.HTTP_404_NOT_FOUND)
+        return Response(SesionProcesoSerializer(sesion).data)
 
     @action(detail=False, methods=['post'])
     def upload_csv(self, request):
@@ -130,7 +140,7 @@ class ProcesoViewSet(viewsets.ViewSet):
                 ruta_csv=ruta_csv,
                 tipo=sesion.tipo,
                 codigo_empresa=empresa.codigo,
-                año=sesion.anio,
+                anio=sesion.anio,
                 mes=sesion.mes,
                 subtipo_vta=sesion.subtipo_vta
             )
@@ -148,7 +158,10 @@ class ProcesoViewSet(viewsets.ViewSet):
                 excel_path = guardar_excel_final(df_forexel, df_docref, [], sesion.tipo, nombre_archivo)
                 sesion.excel_file.name = excel_path
                 sesion.estado = 'COMPLETED'
-                sesion.resumen = calcular_resumen(df_forexel, sesion.tipo)
+                resumen_calc = calcular_resumen(df_forexel, sesion.tipo)
+                resumen_calc['empresa'] = f"{empresa.codigo} - {empresa.razon_social}"
+                resumen_calc['periodo'] = f"{sesion.mes}/{sesion.anio}"
+                sesion.resumen = resumen_calc
                 sesion.save()
                 return Response(SesionProcesoSerializer(sesion).data)
             else: # COM
@@ -160,14 +173,19 @@ class ProcesoViewSet(viewsets.ViewSet):
                 sesion.save()
                 return Response(SesionProcesoSerializer(sesion).data)
                 
-        except Exception as e:
+        except ValueError as ve:
+            logger.warning(f"Error de validacion CSV en sesion {sesion.id}: {str(ve)}")
             sesion.delete()
-            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({"error": str(ve), "code": "CSV_VALIDATION_ERROR"}, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            logger.error(f"Error inesperado procesando CSV en sesion {sesion.id}: {traceback.format_exc()}")
+            sesion.delete()
+            return Response({"error": "No se pudo procesar el archivo CSV. Verifique que sea un archivo oficial de SIRE SUNAT.", "code": "CSV_PROCESSING_ERROR"}, status=status.HTTP_400_BAD_REQUEST)
 
     @action(detail=True, methods=['get', 'post'])
     def detracciones(self, request, pk=None):
         sesion = self.get_sesion(pk, request.user)
-        if not sesion: return Response(status=404)
+        if not sesion: return Response({"error": "Sesión no encontrada o no autorizada"}, status=status.HTTP_404_NOT_FOUND)
             
         if request.method == 'GET':
             return Response(sesion.datos_detracciones)
@@ -188,13 +206,13 @@ class ProcesoViewSet(viewsets.ViewSet):
     @action(detail=True, methods=['get'])
     def facturas(self, request, pk=None):
         sesion = self.get_sesion(pk, request.user)
-        if not sesion: return Response(status=404)
+        if not sesion: return Response({"error": "Sesión no encontrada o no autorizada"}, status=status.HTTP_404_NOT_FOUND)
         return Response(sesion.datos_prescan.get('facturas', []))
 
     @action(detail=True, methods=['post'])
     def asignar_cuenta(self, request, pk=None):
         sesion = self.get_sesion(pk, request.user)
-        if not sesion: return Response(status=404)
+        if not sesion: return Response({"error": "Sesión no encontrada o no autorizada"}, status=status.HTTP_404_NOT_FOUND)
             
         serializer = AsignarCuentaSerializer(data=request.data)
         if not serializer.is_valid():
@@ -234,7 +252,7 @@ class ProcesoViewSet(viewsets.ViewSet):
     @action(detail=True, methods=['post'])
     def generar(self, request, pk=None):
         sesion = self.get_sesion(pk, request.user)
-        if not sesion: return Response(status=404)
+        if not sesion: return Response({"error": "Sesión no encontrada o no autorizada"}, status=status.HTTP_404_NOT_FOUND)
             
         asignaciones = AsignacionCuenta.objects.filter(sesion=sesion)
         cuentas_dict = {a.factura_id: a.cuenta.codigo for a in asignaciones}
@@ -245,7 +263,7 @@ class ProcesoViewSet(viewsets.ViewSet):
                 ruta_csv=ruta_csv,
                 tipo=sesion.tipo,
                 codigo_empresa=sesion.empresa.codigo,
-                año=sesion.anio,
+                anio=sesion.anio,
                 mes=sesion.mes,
                 subtipo_vta=sesion.subtipo_vta,
                 cuentas_asignadas=cuentas_dict
@@ -261,26 +279,30 @@ class ProcesoViewSet(viewsets.ViewSet):
             sesion.estado = 'COMPLETED'
             
             df_final = df_forexel.drop(index=excluidos, errors='ignore') if excluidos else df_forexel
-            sesion.resumen = calcular_resumen(df_final, sesion.tipo)
+            resumen_calc = calcular_resumen(df_final, sesion.tipo)
+            resumen_calc['empresa'] = f"{sesion.empresa.codigo} - {sesion.empresa.razon_social}"
+            resumen_calc['periodo'] = f"{sesion.mes}/{sesion.anio}"
+            sesion.resumen = resumen_calc
             sesion.save()
             
             return Response(SesionProcesoSerializer(sesion).data)
         except Exception as e:
-            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            logger.error(f"Error generando Excel para sesion {sesion.id}: {traceback.format_exc()}")
+            return Response({"error": "Error interno al generar el archivo Excel.", "code": "EXCEL_GENERATION_ERROR"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     @action(detail=True, methods=['get'])
     def descargar(self, request, pk=None):
         sesion = self.get_sesion(pk, request.user)
-        if not sesion: return Response(status=404)
+        if not sesion: return Response({"error": "Sesion no encontrada"}, status=status.HTTP_404_NOT_FOUND)
             
-        if not sesion.excel_file:
-            return Response({"error": "File not found"}, status=status.HTTP_404_NOT_FOUND)
+        if not sesion.excel_file or not os.path.exists(sesion.excel_file.path):
+            return Response({"error": "El archivo generado no se encuentra en el servidor."}, status=status.HTTP_404_NOT_FOUND)
         return FileResponse(open(sesion.excel_file.path, 'rb'), as_attachment=True, filename=os.path.basename(sesion.excel_file.name))
 
     @action(detail=True, methods=['get'])
     def resumen(self, request, pk=None):
         sesion = self.get_sesion(pk, request.user)
-        if not sesion: return Response(status=404)
+        if not sesion: return Response({"error": "Sesión no encontrada o no autorizada"}, status=status.HTTP_404_NOT_FOUND)
         return Response(sesion.resumen)
 
 
@@ -364,13 +386,15 @@ class AuthLoginView(views.APIView):
             rol = user.perfil.rol if hasattr(user, 'perfil') else None
             estado = user.perfil.estado if hasattr(user, 'perfil') else None
             return Response({
-                'id': user.id,
-                'username': user.username,
-                'email': user.email,
-                'first_name': user.first_name,
-                'last_name': user.last_name,
-                'rol': rol,
-                'estado': estado
+                'user': {
+                    'id': user.id,
+                    'username': user.username,
+                    'email': user.email,
+                    'first_name': user.first_name,
+                    'last_name': user.last_name,
+                    'rol': rol,
+                    'estado': estado
+                }
             })
         return Response({'error': 'Credenciales inválidas'}, status=status.HTTP_401_UNAUTHORIZED)
 
@@ -596,7 +620,13 @@ class CalculadoraImpuestosView(views.APIView):
             if empresa.usuario != request.user:
                 return Response({"error": "No tiene permiso para usar esta empresa"}, status=status.HTTP_403_FORBIDDEN)
 
-        sesiones = SesionProceso.objects.filter(empresa=empresa, anio=anio, mes=mes, estado='COMPLETED')
+        anio_2d = str(anio)[-2:] if anio else ''
+        mes_2d = str(mes).zfill(2) if mes else ''
+
+        sesiones = SesionProceso.objects.filter(
+            Q(empresa=empresa, anio=anio_2d, mes=mes_2d, estado='COMPLETED') |
+            Q(empresa=empresa, anio=str(anio), mes=str(mes), estado='COMPLETED')
+        )
         ventas_monto = 0
         ventas_igv = 0
         compras_monto = 0
@@ -610,7 +640,9 @@ class CalculadoraImpuestosView(views.APIView):
                 compras_monto += sesion.resumen.get('bi_total', 0) if sesion.resumen else 0
                 compras_igv += sesion.resumen.get('igv_total', 0) if sesion.resumen else 0
 
-        liq = LiquidacionImpuesto.objects.filter(empresa=empresa, anio=anio, mes=mes).first()
+        liq = LiquidacionImpuesto.objects.filter(empresa=empresa, anio=anio_2d, mes=mes_2d).first()
+        if not liq and anio and mes:
+            liq = LiquidacionImpuesto.objects.filter(empresa=empresa, anio=str(anio), mes=str(mes)).first()
         liq_data = LiquidacionImpuestoSerializer(liq).data if liq else None
 
         return Response({
@@ -637,10 +669,13 @@ class CalculadoraImpuestosView(views.APIView):
             if empresa.usuario != request.user:
                 return Response({"error": "No tiene permiso para usar esta empresa"}, status=status.HTTP_403_FORBIDDEN)
 
+        anio_2d = str(anio)[-2:] if anio else ''
+        mes_2d = str(mes).zfill(2) if mes else ''
+
         liq, created = LiquidacionImpuesto.objects.update_or_create(
             empresa=empresa,
-            anio=anio,
-            mes=mes,
+            anio=anio_2d,
+            mes=mes_2d,
             defaults={
                 'compras_no_gravadas': request.data.get('compras_no_gravadas', 0),
                 'credito_fiscal_anterior': request.data.get('credito_fiscal_anterior', 0),

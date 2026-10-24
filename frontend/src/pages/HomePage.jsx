@@ -9,16 +9,23 @@ const HomePage = () => {
   const { startProceso, loading } = useProcesador();
 
   const handleProcess = async (data) => {
-    // In a real app, you would start process, get session ID and navigate
-    // await startProceso(data);
-    navigate('/proceso/demo-session');
+    try {
+      const sesion = await startProceso(data);
+      if (sesion && sesion.id) {
+        navigate(`/proceso/${sesion.id}`);
+      }
+    } catch (err) {
+      // El error ya es manejado y notificado en useProcesador (Toast y state)
+    }
   };
 
   return (
     <div className="min-h-screen bg-sire-dark">
       {loading && (
-        <div className="fixed top-0 left-0 w-full h-1 bg-sire-secondary z-50">
-          <div className="h-full bg-sire-blue animate-pulse w-full"></div>
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center">
+          <div className="w-16 h-16 border-4 border-sire-secondary border-t-sire-blue rounded-full animate-spin"></div>
+          <p className="mt-4 text-white font-medium text-lg">Procesando archivo CSV en el servidor...</p>
+          <p className="text-gray-400 text-sm mt-1">Extrayendo comprobantes, validando detracciones y estructurando macro...</p>
         </div>
       )}
       <Dashboard onProcess={handleProcess} />

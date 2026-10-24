@@ -1,0 +1,362 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$2UDRG31ePcIOUZjVKohhKu$KVLCFwl9A/wrrdjBQuDWYS2UJsn+ZSCF98vpRHT847M=",
+    "last_login": "2026-10-24T03:43:16.057Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@sire.local",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-11T16:44:54.668Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$eGq1FgPKPB8Tbf3V7MrByv$g1qTroIBdi7mNvYYxqsPRG7hOkVGrG9NZnpKmQ0F0mg=",
+    "last_login": "2026-09-14T23:26:43.014Z",
+    "is_superuser": false,
+    "username": "JHONOR",
+    "first_name": "Jhon Marko",
+    "last_name": "Ordo├▒ez Diaz",
+    "email": "diazmarko502@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-11T18:07:53.696Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$F8NDMK33tCSTuVrPht7Zf8$vOEm0zVDX5qfPxxBCHe1hnqFutOJIb4zXfssQpDy/wo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "carlos.mendoza",
+    "first_name": "Carlos",
+    "last_name": "Mendoza",
+    "email": "carlos.mendoza@estudioponce.pe",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-24T06:55:09.266Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$voH5TYqcyY9UYLiq2h684K$4ORqdROZO48NBoZL+bQfhNkA3O47WqQ5Bs2ZzTd3zBI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ana.torres",
+    "first_name": "Ana",
+    "last_name": "Torres",
+    "email": "ana.torres@estudioponce.pe",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-24T06:55:09.467Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$foKg6hBkcgO9GA97a7GpKI$QFc7qf+cS1nN587/bzbgW97YuMklhWsXICf4HI8Tw58=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "luis.valdez",
+    "first_name": "Luis",
+    "last_name": "Valdez",
+    "email": "luis.valdez@estudioponce.pe",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-24T06:55:09.611Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$zRUSAnb3tZSz9BoRCaNZ5w$ldKmZDndMhDyho4ixsCLb8skRCPvtCsENY6wKusCXuE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "maria.rodriguez",
+    "first_name": "Mar├¡a",
+    "last_name": "Rodr├¡guez",
+    "email": "maria.rodriguez@estudioponce.pe",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-24T06:55:09.788Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$k1gYCokS17viu7SSVQ1F0Z$WC+Dn00fqIThZH8+89dEEn3LjRcXU4e6Tx06mztlVa4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jorge.castillo",
+    "first_name": "Jorge",
+    "last_name": "Castillo",
+    "email": "jorge.castillo@estudioponce.pe",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-24T06:55:09.925Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$wybwQH7Jt3RS9583LsvHwY$PBa3SANdOthqjfu3pg4Fv/Nwt9iPp2V47KtaE8ZCXQ8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "claudia.flores",
+    "first_name": "Claudia",
+    "last_name": "Flores",
+    "email": "claudia.flores@estudioponce.pe",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-24T06:55:10.093Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$6OuM97E1TJFyGWGAS3gdzz$Uc8tZq9FHaVYqRKgPab2dfi3iwTtm1IW2DguU0IdX8M=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "diego.quispe",
+    "first_name": "Diego",
+    "last_name": "Quispe",
+    "email": "diego.quispe@estudioponce.pe",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-24T06:55:10.234Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$vO4vskq8el2rgdYOk6CTSU$uatev/NhJrQ878oW5gDpsOE3A50ixFpLHMaVe8RPSWs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "valeria.ramos",
+    "first_name": "Valeria",
+    "last_name": "Ramos",
+    "email": "valeria.ramos@estudioponce.pe",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-24T06:55:10.397Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$eIVO1cKq5XBQ2CTiK8NA9K$MiatnH/1CBeKjxbi8A1Ake372IBGoPeyRGyu3XJy42c=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "pedro.gutierrez",
+    "first_name": "Pedro",
+    "last_name": "Guti├⌐rrez",
+    "email": "pedro.gutierrez@estudioponce.pe",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-24T06:55:10.530Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$XTzLZejIpSAXQTPDtaAssW$u/GQjUfFuZmwUiMomq8+WI+n7wiveIsqURraAB7+Awk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "patricia.silva",
+    "first_name": "Patricia",
+    "last_name": "Silva",
+    "email": "patricia.silva@estudioponce.pe",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-24T06:55:10.697Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "api.perfilusuario",
+  "pk": 1,
+  "fields": {
+    "usuario": 1,
+    "rol": "ADMIN",
+    "estado": "ACTIVO",
+    "telefono": "",
+    "created_at": "2026-09-11T16:56:28.911Z",
+    "updated_at": "2026-10-24T03:43:16.064Z"
+  }
+},
+{
+  "model": "api.perfilusuario",
+  "pk": 2,
+  "fields": {
+    "usuario": 2,
+    "rol": "CONTADOR",
+    "estado": "ACTIVO",
+    "telefono": "918812465",
+    "created_at": "2026-09-11T18:07:53.843Z",
+    "updated_at": "2026-09-14T23:26:43.018Z"
+  }
+},
+{
+  "model": "api.perfilusuario",
+  "pk": 3,
+  "fields": {
+    "usuario": 3,
+    "rol": "CONTADOR",
+    "estado": "ACTIVO",
+    "telefono": "987111222",
+    "created_at": "2026-10-24T06:55:09.278Z",
+    "updated_at": "2026-10-24T06:55:09.465Z"
+  }
+},
+{
+  "model": "api.perfilusuario",
+  "pk": 4,
+  "fields": {
+    "usuario": 4,
+    "rol": "CONTADOR",
+    "estado": "ACTIVO",
+    "telefono": "987222333",
+    "created_at": "2026-10-24T06:55:09.467Z",
+    "updated_at": "2026-10-24T06:55:09.609Z"
+  }
+},
+{
+  "model": "api.perfilusuario",
+  "pk": 5,
+  "fields": {
+    "usuario": 5,
+    "rol": "CONTADOR",
+    "estado": "ACTIVO",
+    "telefono": "987333444",
+    "created_at": "2026-10-24T06:55:09.612Z",
+    "updated_at": "2026-10-24T06:55:09.786Z"
+  }
+},
+{
+  "model": "api.perfilusuario",
+  "pk": 6,
+  "fields": {
+    "usuario": 6,
+    "rol": "CONTADOR",
+    "estado": "ACTIVO",
+    "telefono": "987444555",
+    "created_at": "2026-10-24T06:55:09.790Z",
+    "updated_at": "2026-10-24T06:55:09.923Z"
+  }
+},
+{
+  "model": "api.perfilusuario",
+  "pk": 7,
+  "fields": {
+    "usuario": 7,
+    "rol": "CONTADOR",
+    "estado": "ACTIVO",
+    "telefono": "987555666",
+    "created_at": "2026-10-24T06:55:09.926Z",
+    "updated_at": "2026-10-24T06:55:10.091Z"
+  }
+},
+{
+  "model": "api.perfilusuario",
+  "pk": 8,
+  "fields": {
+    "usuario": 8,
+    "rol": "CONTADOR",
+    "estado": "ACTIVO",
+    "telefono": "987666777",
+    "created_at": "2026-10-24T06:55:10.093Z",
+    "updated_at": "2026-10-24T06:55:10.233Z"
+  }
+},
+{
+  "model": "api.perfilusuario",
+  "pk": 9,
+  "fields": {
+    "usuario": 9,
+    "rol": "CONTADOR",
+    "estado": "ACTIVO",
+    "telefono": "987777888",
+    "created_at": "2026-10-24T06:55:10.235Z",
+    "updated_at": "2026-10-24T06:55:10.396Z"
+  }
+},
+{
+  "model": "api.perfilusuario",
+  "pk": 10,
+  "fields": {
+    "usuario": 10,
+    "rol": "CONTADOR",
+    "estado": "ACTIVO",
+    "telefono": "987888999",
+    "created_at": "2026-10-24T06:55:10.398Z",
+    "updated_at": "2026-10-24T06:55:10.529Z"
+  }
+},
+{
+  "model": "api.perfilusuario",
+  "pk": 11,
+  "fields": {
+    "usuario": 11,
+    "rol": "CONTADOR",
+    "estado": "ACTIVO",
+    "telefono": "987999000",
+    "created_at": "2026-10-24T06:55:10.531Z",
+    "updated_at": "2026-10-24T06:55:10.696Z"
+  }
+},
+{
+  "model": "api.perfilusuario",
+  "pk": 12,
+  "fields": {
+    "usuario": 12,
+    "rol": "CONTADOR",
+    "estado": "ACTIVO",
+    "telefono": "987000111",
+    "created_at": "2026-10-24T06:55:10.698Z",
+    "updated_at": "2026-10-24T06:55:10.833Z"
+  }
+}
+]

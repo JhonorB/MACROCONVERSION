@@ -9,11 +9,13 @@ const AsignadorCuentas = ({ facturas, onAssign, onGenerate, counters, periodo })
   const [applyToAll, setApplyToAll] = useState(false);
 
   const selectedFactura = facturas.find(f => f.id === selectedFacturaId) || facturas.find(f => !f.cuenta_asignada) || facturas[0];
-  const progress = Math.round((counters.assigned / counters.total) * 100) || 0;
+  const totalCount = counters?.total || facturas.length || 0;
+  const assignedCount = counters?.assigned || facturas.filter(f => f.cuenta_asignada).length || 0;
+  const progress = totalCount > 0 ? Math.round((assignedCount / totalCount) * 100) : 0;
 
   const handleAssign = (cuentaCodigo) => {
     if (selectedFactura) {
-      onAssign(selectedFactura.id, cuentaCodigo, applyToAll ? selectedFactura.ruc : null);
+      onAssign(selectedFactura.id, cuentaCodigo, Boolean(applyToAll));
       
       // Auto-jump to next unassigned
       const nextUnassigned = facturas.find(f => !f.cuenta_asignada && f.id !== selectedFactura.id);
@@ -28,7 +30,7 @@ const AsignadorCuentas = ({ facturas, onAssign, onGenerate, counters, periodo })
       {/* Header Bar */}
       <div className="bg-sire-card border-b border-sire-secondary p-4 flex justify-between items-center shadow-md z-10">
         <div>
-          <h2 className="text-xl font-bold text-sire-blue">PERIODO: {periodo || 'JULIO 2026'}</h2>
+          <h2 className="text-xl font-bold text-sire-blue">PERÍODO: {periodo || 'PROCESO ACTUAL'}</h2>
           <div className="flex space-x-4 text-sm text-gray-400 mt-1">
             <span>Facturas: {counters?.facturas || 0}</span>
             <span>Boletas: {counters?.boletas || 0}</span>
@@ -66,13 +68,13 @@ const AsignadorCuentas = ({ facturas, onAssign, onGenerate, counters, periodo })
           {selectedFactura ? (
             <>
               <div className="bg-sire-secondary/50 rounded-xl p-4 mb-6 border border-sire-secondary">
-                <h3 className="text-sm text-gray-400 mb-1">Asignando a:</h3>
+                <h3 className="text-sm text-gray-400 mb-1">Asignando cuenta contable a:</h3>
                 <div className="flex items-center justify-between">
                   <div>
                     <span className="font-bold text-lg text-white mr-3">{selectedFactura.serie}-{selectedFactura.numero}</span>
                     <span className="text-gray-300">{selectedFactura.ruc} - {selectedFactura.razon_social}</span>
                   </div>
-                  <span className="text-xl font-bold text-sire-blue">S/ {selectedFactura.importe}</span>
+                  <span className="text-xl font-bold text-sire-blue">S/ {Number(selectedFactura.importe || 0).toFixed(2)}</span>
                 </div>
               </div>
 
@@ -80,14 +82,14 @@ const AsignadorCuentas = ({ facturas, onAssign, onGenerate, counters, periodo })
                 <BuscadorCuentas value={searchQuery} onChange={setSearchQuery} />
               </div>
               
-              <label className="flex items-center space-x-2 mb-4 cursor-pointer">
+              <label className="flex items-center space-x-2 mb-4 cursor-pointer select-none">
                 <input 
                   type="checkbox" 
                   checked={applyToAll} 
                   onChange={(e) => setApplyToAll(e.target.checked)}
                   className="w-4 h-4 rounded text-sire-blue focus:ring-sire-blue bg-sire-dark border-gray-600"
                 />
-                <span className="text-sm text-gray-300">✅ Aplicar cuenta a TODAS las facturas de este RUC ({selectedFactura.ruc})</span>
+                <span className="text-sm text-gray-300">✓ Aplicar cuenta a TODAS las facturas de este RUC ({selectedFactura.ruc})</span>
               </label>
 
               <div className="flex-1 overflow-hidden">
@@ -100,7 +102,7 @@ const AsignadorCuentas = ({ facturas, onAssign, onGenerate, counters, periodo })
             </>
           ) : (
             <div className="flex-1 flex items-center justify-center text-gray-500">
-              Selecciona un comprobante para asignar cuenta.
+              Selecciona un comprobante de la lista para asignar cuenta.
             </div>
           )}
         </div>
@@ -109,18 +111,18 @@ const AsignadorCuentas = ({ facturas, onAssign, onGenerate, counters, periodo })
       {/* Bottom Bar */}
       <div className="bg-sire-card border-t border-sire-secondary p-4 flex justify-between items-center shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-10">
         <div className="text-gray-400 font-medium">
-          {counters?.assigned || 0} de {counters?.total || 0} asignadas
+          <span className="text-white font-bold">{assignedCount}</span> de <span className="text-white font-bold">{totalCount}</span> asignadas {totalCount > assignedCount && <span className="text-xs text-yellow-400 ml-2">(las no asignadas usarán 6011001 por defecto)</span>}
         </div>
         <button 
           onClick={onGenerate}
-          disabled={counters?.assigned !== counters?.total || counters?.total === 0}
+          disabled={totalCount === 0}
           className={`px-8 py-3 rounded-lg font-bold text-white transition shadow-lg ${
-            counters?.assigned === counters?.total && counters?.total > 0
-              ? 'bg-sire-green hover:bg-emerald-500 cursor-pointer' 
-              : 'bg-gray-600 cursor-not-allowed'
+            totalCount > 0
+              ? 'bg-sire-green hover:bg-emerald-500 cursor-pointer shadow-emerald-900/30' 
+              : 'bg-gray-600 cursor-not-allowed opacity-50'
           }`}
         >
-          💾 GUARDAR Y GENERAR MACRO
+          🚀 GUARDAR Y GENERAR MACRO
         </button>
       </div>
     </div>

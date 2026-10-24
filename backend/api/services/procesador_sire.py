@@ -2,7 +2,7 @@ import pandas as pd
 import os
 from .verificador_deudas import verificar_deudas
 
-def preparar_dataframes(ruta_csv, tipo, codigo_empresa, año, mes, subtipo_vta="", cuentas_asignadas=None):
+def preparar_dataframes(ruta_csv, tipo, codigo_empresa, anio, mes, subtipo_vta="", cuentas_asignadas=None):
     df = None
     for enc in ['utf-8-sig', 'utf-8', 'latin1', 'cp1252']:
         for sep in ['|', '\t', ';', ',']:
@@ -48,7 +48,7 @@ def preparar_dataframes(ruta_csv, tipo, codigo_empresa, año, mes, subtipo_vta="
         ]
     
     df_forexel = pd.DataFrame(columns=columnas_forexel)
-    eliminados_año_pasado = 0
+    eliminados_anio_pasado = 0
     eliminados_deuda = 0
     lista_detracciones = []
 
@@ -194,11 +194,11 @@ def preparar_dataframes(ruta_csv, tipo, codigo_empresa, año, mes, subtipo_vta="
         cantidad_nc = df_forexel["TIPDOC"].astype(str).str.strip().str.zfill(2).isin(["07", "08"]).sum()
         
         try:
-            año_completo = "20" + str(año)
-            fechas_años = df_forexel["FECEMI"].astype(str).str.strip().str[-4:]
-            mask_año_pasado = fechas_años.str.isdigit() & (fechas_años < año_completo)
+            anio_completo = "20" + str(anio)
+            fechas_anios = df_forexel["FECEMI"].astype(str).str.strip().str[-4:]
+            mask_anio_pasado = fechas_anios.str.isdigit() & (fechas_anios < anio_completo)
             
-            if mask_año_pasado.any():
+            if mask_anio_pasado.any():
                 def es_detrac_col_old(val):
                     v = str(val).strip().upper()
                     return v == 'D' or v == '1'
@@ -211,10 +211,10 @@ def preparar_dataframes(ruta_csv, tipo, codigo_empresa, año, mes, subtipo_vta="
                 if not mask_detraccion_prev.any():
                     mask_detraccion_prev = df.apply(lambda row: row.map(lambda x: str(x).strip().upper() == 'D').any(), axis=1)
 
-                mask_eliminar = mask_año_pasado & (~mask_detraccion_prev)
-                eliminados_año_pasado = mask_eliminar.sum()
+                mask_eliminar = mask_anio_pasado & (~mask_detraccion_prev)
+                eliminados_anio_pasado = mask_eliminar.sum()
                 
-                if eliminados_año_pasado > 0:
+                if eliminados_anio_pasado > 0:
                     df_forexel = df_forexel[~mask_eliminar]
                     df = df[~mask_eliminar]
                     
@@ -299,7 +299,7 @@ def preparar_dataframes(ruta_csv, tipo, codigo_empresa, año, mes, subtipo_vta="
                     "TIPDOC": str(df_forexel['TIPDOC'].iloc[i]),
                     "TIENE_D": bool(mask_detraccion_filas.iloc[i])
                 })
-            return None, None, lista_detracciones, int(cantidad_nc), int(eliminados_año_pasado), facturas, int(eliminados_deuda)
+            return None, None, lista_detracciones, int(cantidad_nc), int(eliminados_anio_pasado), facturas, int(eliminados_deuda)
         else:
             def aplicar_cta(row):
                 id_fact = f"{row['SERIE']}-{row['NUMERO']}-{row['CODENT']}"
@@ -383,4 +383,4 @@ def preparar_dataframes(ruta_csv, tipo, codigo_empresa, año, mes, subtipo_vta="
 
     cantidad_nc_global = df_forexel["TIPDOC"].astype(str).str.strip().str.zfill(2).isin(["07", "08"]).sum()
     
-    return df_forexel, df_docref, lista_detracciones, int(cantidad_nc_global), int(eliminados_año_pasado), [], int(eliminados_deuda)
+    return df_forexel, df_docref, lista_detracciones, int(cantidad_nc_global), int(eliminados_anio_pasado), [], int(eliminados_deuda)

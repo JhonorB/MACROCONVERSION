@@ -5,11 +5,11 @@ import { ExclamationTriangleIcon, DocumentDuplicateIcon } from '@heroicons/react
 const DetraccionesModal = ({ detracciones, onConfirm }) => {
   const [excluded, setExcluded] = useState(new Set());
 
-  const toggleExclude = (index) => {
+  const toggleExclude = (id) => {
     setExcluded(prev => {
       const next = new Set(prev);
-      if (next.has(index)) next.delete(index);
-      else next.add(index);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
       return next;
     });
   };
@@ -43,10 +43,11 @@ const DetraccionesModal = ({ detracciones, onConfirm }) => {
           {/* List */}
           <div className="flex-1 overflow-y-auto p-6 space-y-4">
             {detracciones.map((det, index) => {
-              const isExcluded = excluded.has(index);
+              const detId = det.idx !== undefined ? det.idx : index;
+              const isExcluded = excluded.has(detId);
               return (
                 <div 
-                  key={index} 
+                  key={detId} 
                   className={`flex items-center justify-between p-4 rounded-xl border transition-colors ${
                     isExcluded ? 'border-sire-red/50 bg-sire-red/5 opacity-75' : 'border-sire-green/50 bg-sire-green/5'
                   }`}
@@ -65,12 +66,12 @@ const DetraccionesModal = ({ detracciones, onConfirm }) => {
                   <div className="flex items-center space-x-6">
                     <div className="text-right">
                       <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Importe</p>
-                      <p className="font-bold text-white">S/ {Number(det.importe).toFixed(2)}</p>
+                      <p className="font-bold text-white">S/ {Number(det.importe || 0).toFixed(2)}</p>
                     </div>
                     
                     {/* Toggle */}
                     <button 
-                      onClick={() => toggleExclude(index)}
+                      onClick={() => toggleExclude(detId)}
                       className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                         isExcluded ? 'bg-sire-red' : 'bg-sire-green'
                       }`}

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useEmpresas } from '../hooks/useEmpresas';
+import EmpresaCombobox from '../components/empresas/EmpresaCombobox';
 import * as api from '../api/client';
 import { showToast } from '../components/layout/Toast';
 import { CalculatorIcon, DocumentCheckIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
@@ -69,7 +70,12 @@ const CalculadoraImpuestosPage = () => {
     { value: 11, label: 'Noviembre' }, { value: 12, label: 'Diciembre' }
   ];
 
-  const anios = Array.from({ length: 5 }, (_, i) => new Date().getFullYear() - i);
+  const anios = [2026, 2025, 2024, 2023, 2022, 2021, 2020];
+
+  const selectedEmpresa = useMemo(() => {
+    if (!empresaId) return null;
+    return empresas.find(e => String(e.id) === String(empresaId)) || null;
+  }, [empresas, empresaId]);
 
   const handleCargar = async () => {
     if (!empresaId || !mes || !anio) {
@@ -154,7 +160,7 @@ const CalculadoraImpuestosPage = () => {
     const renta = ventasMonto * tRenta;
     const saldoXPagarRenta = renta - sfRenta;
 
-    // Total a pagar sum - only positives or true sum? Excel usually sums up the final liabilities
+    // Total a pagar sum
     const totalAPagar = saldoXPagarFinalIgv + saldoXPagarRenta; 
 
     return {
@@ -183,61 +189,106 @@ const CalculadoraImpuestosPage = () => {
         </div>
       </motion.div>
 
-      {/* Control Panel */}
+      {/* Control Panel with Searchable Combobox */}
       <div className="bg-sire-card border border-sire-secondary rounded-xl p-6 mb-8 shadow-xl">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
-          <div>
-            <label className="block text-sm font-medium text-gray-400 mb-2">Empresa</label>
-            <select
-              value={empresaId}
-              onChange={(e) => setEmpresaId(e.target.value)}
-              className="w-full bg-sire-dark border border-sire-secondary rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-sire-blue focus:ring-1 focus:ring-sire-blue transition-colors"
-            >
-              <option value="">Seleccione una empresa...</option>
-              {empresas.map(emp => (
-                <option key={emp.id} value={emp.id}>{emp.razon_social} ({emp.ruc})</option>
-              ))}
-            </select>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-end">
+          {/* Empresa Selector */}
+          <div className="md:col-span-6 lg:col-span-5">
+            <label className="block text-sm font-medium text-gray-300 mb-2">
+              Empresa
+            </label>
+            <EmpresaCombobox
+              empresas={empresas}
+              selectedId={empresaId}
+              onSelect={setEmpresaId}
+              loading={empresasLoading}
+              placeholder="Buscar por RUC, nombre o código..."
+            />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-400 mb-2">Mes</label>
-            <select
-              value={mes}
-              onChange={(e) => setMes(e.target.value)}
-              className="w-full bg-sire-dark border border-sire-secondary rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-sire-blue transition-colors"
-            >
-              {meses.map(m => (
-                <option key={m.value} value={m.value}>{m.label}</option>
-              ))}
-            </select>
+
+          {/* Mes Selector */}
+          <div className="md:col-span-3 lg:col-span-2">
+            <label className="block text-sm font-medium text-gray-300 mb-2">
+              Mes
+            </label>
+            <div className="relative">
+              <select
+                value={mes}
+                onChange={(e) => setMes(Number(e.target.value))}
+                className="w-full bg-sire-dark border border-sire-secondary rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-sire-blue focus:ring-1 focus:ring-sire-blue transition-colors appearance-none cursor-pointer"
+              >
+                {meses.map(m => (
+                  <option key={m.value} value={m.value}>{m.label}</option>
+                ))}
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-gray-400">
+                <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                  <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                </svg>
+              </div>
+            </div>
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-400 mb-2">Año</label>
-            <select
-              value={anio}
-              onChange={(e) => setAnio(e.target.value)}
-              className="w-full bg-sire-dark border border-sire-secondary rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-sire-blue transition-colors"
-            >
-              {anios.map(a => (
-                <option key={a} value={a}>{a}</option>
-              ))}
-            </select>
+
+          {/* Año Selector */}
+          <div className="md:col-span-3 lg:col-span-2">
+            <label className="block text-sm font-medium text-gray-300 mb-2">
+              Año
+            </label>
+            <div className="relative">
+              <select
+                value={anio}
+                onChange={(e) => setAnio(Number(e.target.value))}
+                className="w-full bg-sire-dark border border-sire-secondary rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-sire-blue focus:ring-1 focus:ring-sire-blue transition-colors appearance-none cursor-pointer"
+              >
+                {anios.map(a => (
+                  <option key={a} value={a}>{a}</option>
+                ))}
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-gray-400">
+                <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                  <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                </svg>
+              </div>
+            </div>
           </div>
-          <div>
+
+          {/* Action Button */}
+          <div className="md:col-span-12 lg:col-span-3">
             <button
               onClick={handleCargar}
-              disabled={loading}
-              className="w-full bg-sire-blue hover:bg-blue-600 text-white font-medium py-2.5 px-4 rounded-lg flex items-center justify-center space-x-2 transition-all shadow-lg shadow-blue-500/20 disabled:opacity-70"
+              disabled={loading || !empresaId}
+              className="w-full bg-sire-blue hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center space-x-2 transition-all shadow-lg shadow-blue-500/20 disabled:opacity-50 disabled:cursor-not-allowed text-sm h-[38px]"
             >
               {loading ? (
-                <ArrowPathIcon className="h-5 w-5 animate-spin" />
+                <ArrowPathIcon className="h-4 w-4 animate-spin" />
               ) : (
-                <CalculatorIcon className="h-5 w-5" />
+                <CalculatorIcon className="h-4 w-4" />
               )}
-              <span>{loading ? 'Cargando...' : 'Cargar Datos'}</span>
+              <span>{loading ? 'Consultando...' : 'Cargar Datos'}</span>
             </button>
           </div>
         </div>
+
+        {/* Selected Empresa Info Banner */}
+        {selectedEmpresa && (
+          <div className="mt-4 pt-3 border-t border-sire-secondary/40 flex flex-wrap items-center justify-between text-xs text-gray-400 gap-2">
+            <div className="flex items-center space-x-2">
+              <span className="text-gray-500">Empresa activa:</span>
+              <span className="font-semibold text-white">{selectedEmpresa.razon_social}</span>
+              <span className="font-mono text-sire-blue bg-sire-blue/10 px-1.5 py-0.5 rounded border border-sire-blue/20">
+                RUC {selectedEmpresa.ruc}
+              </span>
+              {selectedEmpresa.codigo && (
+                <span className="text-gray-300 bg-gray-800 px-1.5 py-0.5 rounded">
+                  COD: {selectedEmpresa.codigo}
+                </span>
+              )}
+            </div>
+            <div className="text-gray-500">
+              Período: <span className="text-gray-300 font-medium">{meses.find(m => m.value === Number(mes))?.label} {anio}</span>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Calculator Grid */}
@@ -295,7 +346,7 @@ const CalculadoraImpuestosPage = () => {
               <NumberInput 
                 label="CREDITO FISCAL ANTERIOR" 
                 value={creditoFiscalAnterior} 
-                onChange={setCreditoFiscalAnterior}
+                onChange={setCreditoFiscalAnterior} 
                 isNegative 
               />
 
@@ -304,7 +355,7 @@ const CalculadoraImpuestosPage = () => {
               <NumberInput 
                 label="COMPROB. PERCEPC." 
                 value={percepciones} 
-                onChange={setPercepciones}
+                onChange={setPercepciones} 
                 isNegative 
               />
 
@@ -336,7 +387,7 @@ const CalculadoraImpuestosPage = () => {
                 <NumberInput 
                   label="TASA" 
                   value={tasaRenta} 
-                  onChange={setTasaRenta}
+                  onChange={setTasaRenta} 
                 />
 
                 <ResultRow label="RENTA" value={calc.renta} isNegativeAllowed={false} />
@@ -344,7 +395,7 @@ const CalculadoraImpuestosPage = () => {
                 <NumberInput 
                   label="SALDO A FAVOR RENTA ANT." 
                   value={saldoFavorRentaAnterior} 
-                  onChange={setSaldoFavorRentaAnterior}
+                  onChange={setSaldoFavorRentaAnterior} 
                   isNegative 
                 />
 
